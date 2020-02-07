@@ -1,0 +1,16 @@
+.contstyle{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+div p{
+    text-align: center;
+    font-size: 13px;
+}
+.animate{
+    height: 370px;
+}
+
+.animate:hover{
+   height: 380px;
+  border: 2px  outset whitesmoke;
+}
