@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
+import { AlldogsComponent } from './dogs/alldogs/alldogs.component';
+import { LightdogsComponent } from './dogs/lightdogs/lightdogs.component';
+import { NormaldogsComponent } from './dogs/normaldogs/normaldogs.component';
+import { HeavydogsComponent } from './dogs/heavydogs/heavydogs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    AlldogsComponent,
+    LightdogsComponent,
+    NormaldogsComponent,
+    HeavydogsComponent
   ],
   imports: [
     BrowserModule,
