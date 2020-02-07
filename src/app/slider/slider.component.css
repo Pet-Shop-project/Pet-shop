@@ -51,7 +51,6 @@ body {
 /*The LI hover style should override the UL hover style*/
 .accordian ul li:hover {width: 640px;}
 
-
 .accordian li img {
 	display: block;
 }
