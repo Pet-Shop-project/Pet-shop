@@ -1,6 +1,8 @@
 
 .navcolor{
-    background-color:skyblue;
+    background-color:#3A9AC1;
+    height: 50px;
+    
    
   
 }
@@ -10,11 +12,32 @@ li a{
     font-weight: bold;
 }
 ul li a:hover{
-    color: darkcyan;
+    color: #51B1B1;
 
 }
 a img{
-    width:70px;
-    height: 70px;
+    width:36px;
+    height: 36px;
     border-radius: 50%;
+}
+.divMenu{
+
+    background-color: white;
+    border: none;
+}
+.itemStyle{
+    border: .5px outset lightblue;
+    border-radius: 50%;
+    background-color: lightblue;
+    color: #394971;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10px;
+}
+.style{
+    border: none;
+}
+.navMARG{
+    margin-right: 15px;
+    margin-left: 15px;
 }
