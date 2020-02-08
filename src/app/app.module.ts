@@ -10,6 +10,10 @@ import { AlldogsComponent } from './dogs/alldogs/alldogs.component';
 import { LightdogsComponent } from './dogs/lightdogs/lightdogs.component';
 import { NormaldogsComponent } from './dogs/normaldogs/normaldogs.component';
 import { HeavydogsComponent } from './dogs/heavydogs/heavydogs.component';
+import { AlldogdetailsComponent } from './dogdetails/alldogdetails/alldogdetails.component';
+import { LightdogdetailsComponent } from './dogdetails/lightdogdetails/lightdogdetails.component';
+import { NormaldogdetailsComponent } from './dogdetails/normaldogdetails/normaldogdetails.component';
+import { HeavydogdetailsComponent } from './dogdetails/heavydogdetails/heavydogdetails.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { HeavydogsComponent } from './dogs/heavydogs/heavydogs.component';
     AlldogsComponent,
     LightdogsComponent,
     NormaldogsComponent,
-    HeavydogsComponent
+    HeavydogsComponent,
+    AlldogdetailsComponent,
+    LightdogdetailsComponent,
+    NormaldogdetailsComponent,
+    HeavydogdetailsComponent
   ],
   imports: [
     BrowserModule,

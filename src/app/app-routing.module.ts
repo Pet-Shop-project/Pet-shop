@@ -5,6 +5,10 @@ import { LightdogsComponent } from './dogs/lightdogs/lightdogs.component';
 import { NormaldogsComponent } from './dogs/normaldogs/normaldogs.component';
 import { HeavydogsComponent } from './dogs/heavydogs/heavydogs.component';
 import { SliderComponent } from './slider/slider.component';
+import { AlldogdetailsComponent } from './dogdetails/alldogdetails/alldogdetails.component';
+import { LightdogdetailsComponent } from './dogdetails/lightdogdetails/lightdogdetails.component';
+import { NormaldogdetailsComponent } from './dogdetails/normaldogdetails/normaldogdetails.component';
+import { HeavydogdetailsComponent } from './dogdetails/heavydogdetails/heavydogdetails.component';
 
 
 const routes: Routes = [
@@ -12,7 +16,11 @@ const routes: Routes = [
   {path:'dogs/alldogs',component:AlldogsComponent},
   {path:'dogs/lightdogs',component:LightdogsComponent},
   {path:'dogs/normaldogs',component:NormaldogsComponent},
-  {path:'dogs/heavydogs',component:HeavydogsComponent}
+  {path:'dogs/heavydogs',component:HeavydogsComponent},
+  {path:'alldogdetails',component:AlldogdetailsComponent},
+  {path:'lightdogdetails',component:LightdogdetailsComponent},
+  {path:'normaldogdetails',component:NormaldogdetailsComponent},
+  {path:'heavydogdetails',component:HeavydogdetailsComponent}
 ];
 
 @NgModule({
