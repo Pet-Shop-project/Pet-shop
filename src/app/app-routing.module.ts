@@ -9,8 +9,11 @@ import { AllpetsComponent } from "src/app/small pets/allpets/allpets.component";
 import { LightpetsComponent } from "src/app/small pets/lightpets/lightpets.component";
 import { HeavypetsComponent } from "src/app/small pets/heavypets/heavypets.component";
 import { NormalpetsComponent } from "src/app/small pets/normalpets/normalpets.component";
-
-
+import {AllCatsComponent}  from './Cats/all-cats/all-cats.component'
+import {LightCatsComponent} from './Cats/light-cats/light-cats.component'
+import{NormalCatsComponent} from './Cats/normal-cats/normal-cats.component'
+import {HeavyCatsComponent} from './Cats/heavy-cats/heavy-cats.component'
+import {CatsDetailsComponent} from './Cats/cats-details/cats-details.component'
 const routes: Routes = [
   {path:'',component:SliderComponent},
   {path:'dogs/alldogs',component:AlldogsComponent},
@@ -20,7 +23,16 @@ const routes: Routes = [
   {path:'smallpets/all',component:AllpetsComponent},
   {path:'smallpets/light',component:LightpetsComponent},
   {path:'smallpets/heavy',component:HeavypetsComponent},
-  {path:'smallpets/normal',component:NormalpetsComponent}
+  {path:'smallpets/normal',component:NormalpetsComponent},
+  {path:'all-cats',component:AllCatsComponent},
+  {path:'light-cats',component:LightCatsComponent},
+  {path:'normal-cats',component:NormalCatsComponent},
+  {path:'heavy-cats',component:HeavyCatsComponent},
+  {path:'details-cats',component:CatsDetailsComponent},
+
+
+
+
 ];
 
 @NgModule({
