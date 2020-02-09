@@ -27,6 +27,15 @@ import { CatsDetailsComponent } from './Cats/cats-details/cats-details.component
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login/login.component';
 import { SignupComponent } from './user/signup/signup.component';
+import { AllBirdsComponent } from './birds/all-birds/all-birds.component';
+import { LightBirdsComponent } from './birds/light-birds/light-birds.component';
+import { HeavyBirdsComponent } from './birds/heavy-birds/heavy-birds.component';
+import { NormalBirdsComponent } from './birds/normal-birds/normal-birds.component';
+import { AllDetailsComponent } from './birds-details/all-details/all-details.component';
+import { LightlDetailsComponent } from './birds-details/lightl-details/lightl-details.component';
+import { HeavyDetailsComponent } from './birds-details/heavy-details/heavy-details.component';
+import { NormalDetailsComponent } from './birds-details/normal-details/normal-details.component';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +63,16 @@ import { SignupComponent } from './user/signup/signup.component';
     CatsDetailsComponent,
     UserComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AllBirdsComponent,
+    LightBirdsComponent,
+    HeavyBirdsComponent,
+    NormalBirdsComponent,
+    AllDetailsComponent,
+    LightlDetailsComponent,
+    HeavyDetailsComponent,
+    NormalDetailsComponent,
+    PageNotfoundComponent
   ],
   imports: [
     BrowserModule,

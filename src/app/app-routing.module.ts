@@ -23,6 +23,17 @@ import {CatsDetailsComponent} from './Cats/cats-details/cats-details.component'
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login/login.component';
 import { SignupComponent } from './user/signup/signup.component';
+
+import { AllBirdsComponent } from './birds/all-birds/all-birds.component';
+import { HeavyBirdsComponent } from './birds/heavy-birds/heavy-birds.component';
+import { LightBirdsComponent } from './birds/light-birds/light-birds.component';
+import { NormalBirdsComponent } from './birds/normal-birds/normal-birds.component';
+import { NormalDetailsComponent } from './birds-details/normal-details/normal-details.component';
+import { LightlDetailsComponent } from './birds-details/lightl-details/lightl-details.component';
+import { AllDetailsComponent } from './birds-details/all-details/all-details.component';
+import { HeavyDetailsComponent } from './birds-details/heavy-details/heavy-details.component';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
+
 const routes: Routes = [
   {path:'',component:SliderComponent},
   {path:'dogs/alldogs',component:AlldogsComponent},
@@ -43,10 +54,19 @@ const routes: Routes = [
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
   {path:'user',component:UserComponent
-,children:[{path:'Login',component:LoginComponent},{path:'SignUp',component:SignupComponent}]}
-
-
-
+,children:[{path:'Login',component:LoginComponent},{path:'SignUp',component:SignupComponent}]},
+{path:'all-birds',component:AllBirdsComponent},
+{path:'heavy-birds',component:HeavyBirdsComponent},
+{path:'light-birds',component:LightBirdsComponent},
+{path:'normal-birds',component:NormalBirdsComponent},
+{path:'normal-details',component:NormalDetailsComponent},
+{path:'light-details',component:LightlDetailsComponent},
+{path:'all-details',component:AllDetailsComponent},
+{path:'heavy-details',component:HeavyDetailsComponent},
+{path:'404',component:PageNotfoundComponent},
+{ path: '', component:PageNotfoundComponent},
+    
+    { path: '**', redirectTo: '404' }
 
 ];
 
