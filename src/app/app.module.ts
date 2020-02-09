@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,6 +10,10 @@ import { AlldogsComponent } from './dogs/alldogs/alldogs.component';
 import { LightdogsComponent } from './dogs/lightdogs/lightdogs.component';
 import { NormaldogsComponent } from './dogs/normaldogs/normaldogs.component';
 import { HeavydogsComponent } from './dogs/heavydogs/heavydogs.component';
+import { AlldogdetailsComponent } from './dogdetails/alldogdetails/alldogdetails.component';
+import { LightdogdetailsComponent } from './dogdetails/lightdogdetails/lightdogdetails.component';
+import { NormaldogdetailsComponent } from './dogdetails/normaldogdetails/normaldogdetails.component';
+import { HeavydogdetailsComponent } from './dogdetails/heavydogdetails/heavydogdetails.component';
 import { AllpetsComponent } from './small pets/allpets/allpets.component';
 import { LightpetsComponent } from './small pets/lightpets/lightpets.component';
 import { HeavypetsComponent } from './small pets/heavypets/heavypets.component';
@@ -25,6 +29,18 @@ import { LightpetsDetailsComponent } from './smallpets details/lightpets-details
 import { HeavypetsDetailsComponent } from './smallpets details/heavypets-details/heavypets-details.component';
 import { NormalpetsDetailsComponent } from './smallpets details/normalpets-details/normalpets-details.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
+import { UserComponent } from './user/user.component';
+import { LoginComponent } from './user/login/login.component';
+import { SignupComponent } from './user/signup/signup.component';
+import { AllBirdsComponent } from './birds/all-birds/all-birds.component';
+import { LightBirdsComponent } from './birds/light-birds/light-birds.component';
+import { HeavyBirdsComponent } from './birds/heavy-birds/heavy-birds.component';
+import { NormalBirdsComponent } from './birds/normal-birds/normal-birds.component';
+import { AllDetailsComponent } from './birds-details/all-details/all-details.component';
+import { LightlDetailsComponent } from './birds-details/lightl-details/lightl-details.component';
+import { HeavyDetailsComponent } from './birds-details/heavy-details/heavy-details.component';
+import { NormalDetailsComponent } from './birds-details/normal-details/normal-details.component';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +52,10 @@ import { AccessoriesComponent } from './accessories/accessories.component';
     LightdogsComponent,
     NormaldogsComponent,
     HeavydogsComponent,
+    AlldogdetailsComponent,
+    LightdogdetailsComponent,
+    NormaldogdetailsComponent,
+    HeavydogdetailsComponent,
     AllpetsComponent,
     LightpetsComponent,
     HeavypetsComponent,
@@ -50,11 +70,24 @@ import { AccessoriesComponent } from './accessories/accessories.component';
     LightpetsDetailsComponent,
     HeavypetsDetailsComponent,
     NormalpetsDetailsComponent,
-    AccessoriesComponent
+    AccessoriesComponent,
+    UserComponent,
+    LoginComponent,
+    SignupComponent,
+    AllBirdsComponent,
+    LightBirdsComponent,
+    HeavyBirdsComponent,
+    NormalBirdsComponent,
+    AllDetailsComponent,
+    LightlDetailsComponent,
+    HeavyDetailsComponent,
+    NormalDetailsComponent,
+    PageNotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
