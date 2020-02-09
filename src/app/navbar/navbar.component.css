@@ -21,8 +21,6 @@ a img{
     border-radius: 50%;
 }
 .divMenu{
-
-    background-color: white;
     border: none;
 }
 .itemStyle{
@@ -33,9 +31,11 @@ a img{
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 10px;
+
 }
 .style{
     border: none;
+    background-color: transparent;
 }
 .navMARG{
     margin-right: 15px;
