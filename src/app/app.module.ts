@@ -20,6 +20,11 @@ import { LightCatsComponent } from './Cats/light-cats/light-cats.component';
 import { NormalCatsComponent } from './Cats/normal-cats/normal-cats.component';
 import { HeavyCatsComponent } from './Cats/heavy-cats/heavy-cats.component';
 import { CatsDetailsComponent } from './Cats/cats-details/cats-details.component';
+import { AllpetsDetailsComponent } from './smallpets details/allpets-details/allpets-details.component';
+import { LightpetsDetailsComponent } from './smallpets details/lightpets-details/lightpets-details.component';
+import { HeavypetsDetailsComponent } from './smallpets details/heavypets-details/heavypets-details.component';
+import { NormalpetsDetailsComponent } from './smallpets details/normalpets-details/normalpets-details.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { CatsDetailsComponent } from './Cats/cats-details/cats-details.component
     LightCatsComponent,
     NormalCatsComponent,
     HeavyCatsComponent,
-    CatsDetailsComponent
+    CatsDetailsComponent,
+    AllpetsDetailsComponent,
+    LightpetsDetailsComponent,
+    HeavypetsDetailsComponent,
+    NormalpetsDetailsComponent,
+    AccessoriesComponent
   ],
   imports: [
     BrowserModule,
