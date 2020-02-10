@@ -41,6 +41,9 @@ import { LightlDetailsComponent } from './birds-details/lightl-details/lightl-de
 import { HeavyDetailsComponent } from './birds-details/heavy-details/heavy-details.component';
 import { NormalDetailsComponent } from './birds-details/normal-details/normal-details.component';
 import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
+import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-details.component';
+import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
+import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,10 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
     LightlDetailsComponent,
     HeavyDetailsComponent,
     NormalDetailsComponent,
-    PageNotfoundComponent
+    PageNotfoundComponent,
+    HeavyCatsDetailsComponent,
+    LightCatsDetailsComponent,
+    NormalCatsDetailsComponent
   ],
   imports: [
     BrowserModule,

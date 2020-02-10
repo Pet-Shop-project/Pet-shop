@@ -38,7 +38,9 @@ import { LightlDetailsComponent } from './birds-details/lightl-details/lightl-de
 import { AllDetailsComponent } from './birds-details/all-details/all-details.component';
 import { HeavyDetailsComponent } from './birds-details/heavy-details/heavy-details.component';
 import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
-
+import {HeavyCatsDetailsComponent} from './Cats/heavy-cats-details/heavy-cats-details.component'
+import {LightCatsDetailsComponent} from './Cats/light-cats-details/light-cats-details.component'
+import {NormalCatsDetailsComponent} from './Cats/normal-cats-details/normal-cats-details.component'
 const routes: Routes = [
   {path:'',component:SliderComponent},
   {path:'accessories',component:AccessoriesComponent},
@@ -76,6 +78,10 @@ const routes: Routes = [
 {path:'light-details',component:LightlDetailsComponent},
 {path:'all-details',component:AllDetailsComponent},
 {path:'heavy-details',component:HeavyDetailsComponent},
+{path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
+{path:'light-cats-details',component:LightCatsDetailsComponent},
+{path:'normal-cats-details',component:NormalCatsDetailsComponent},
+
 {path:'404',component:PageNotfoundComponent},
 { path: '', component:PageNotfoundComponent},
     
