@@ -44,7 +44,8 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-details.component';
 import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
-
+import{HttpClientModule} from '@angular/common/http';
+import { SmallpetServiceService } from './services/smallpet-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,9 +94,12 @@ import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-ca
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    SmallpetServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

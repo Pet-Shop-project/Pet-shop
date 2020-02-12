@@ -64,7 +64,7 @@ const routes: Routes = [
   {path:'details-cats',component:CatsDetailsComponent},
 
   {path:'alldetail',component:AllpetsDetailsComponent},
-  {path:'lightdetail',component:LightpetsDetailsComponent},
+  {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
   {path:'heavydetail',component:HeavypetsDetailsComponent},
   {path:'normaldetail',component:NormalpetsDetailsComponent},
 
@@ -80,12 +80,12 @@ const routes: Routes = [
 {path:'heavy-details',component:HeavyDetailsComponent},
 {path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details',component:LightCatsDetailsComponent},
-{path:'normal-cats-details',component:NormalCatsDetailsComponent},
+{path:'normal-cats-details',component:NormalCatsDetailsComponent}
 
-{path:'404',component:PageNotfoundComponent},
-{ path: '', component:PageNotfoundComponent},
+// {path:'404',component:PageNotfoundComponent},
+// { path: '', component:PageNotfoundComponent},
     
-    { path: '**', redirectTo: '404' }
+//     { path: '**', redirectTo: '404' }
 
 ];
 
