@@ -9,8 +9,6 @@ import { AlldogdetailsComponent } from './dogdetails/alldogdetails/alldogdetails
 import { LightdogdetailsComponent } from './dogdetails/lightdogdetails/lightdogdetails.component';
 import { NormaldogdetailsComponent } from './dogdetails/normaldogdetails/normaldogdetails.component';
 import { HeavydogdetailsComponent } from './dogdetails/heavydogdetails/heavydogdetails.component';
-
-
 import { AllpetsComponent } from "src/app/small pets/allpets/allpets.component";
 import { LightpetsComponent } from "src/app/small pets/lightpets/lightpets.component";
 import { HeavypetsComponent } from "src/app/small pets/heavypets/heavypets.component";
@@ -28,7 +26,6 @@ import { AccessoriesComponent } from "src/app/accessories/accessories.component"
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login/login.component';
 import { SignupComponent } from './user/signup/signup.component';
-
 import { AllBirdsComponent } from './birds/all-birds/all-birds.component';
 import { HeavyBirdsComponent } from './birds/heavy-birds/heavy-birds.component';
 import { LightBirdsComponent } from './birds/light-birds/light-birds.component';
@@ -62,12 +59,10 @@ const routes: Routes = [
   {path:'normal-cats',component:NormalCatsComponent},
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
-
   {path:'alldetail',component:AllpetsDetailsComponent},
   {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
-  {path:'heavydetail',component:HeavypetsDetailsComponent},
-  {path:'normaldetail',component:NormalpetsDetailsComponent},
-
+  {path:'heavydetail/:_id',component:HeavypetsDetailsComponent},
+  {path:'normaldetail/:_id',component:NormalpetsDetailsComponent},
   {path:'user',component:UserComponent
 ,children:[{path:'Login',component:LoginComponent},{path:'SignUp',component:SignupComponent}]},
 {path:'all-birds',component:AllBirdsComponent},
@@ -84,6 +79,7 @@ const routes: Routes = [
 
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},
+
     
 //     { path: '**', redirectTo: '404' }
 

@@ -4,7 +4,7 @@ const schema = mongoose.Schema;
 const lightSmallpets = new schema({
        image:[String],
        name:String,
-       size:Number,
+       size:String,
        life_span:Number,
        weight:Number,
        colors:String,

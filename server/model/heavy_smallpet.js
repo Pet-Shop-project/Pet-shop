@@ -1,13 +1,14 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
-const heavySmallpet = new schema({
-       image:Array,
+const heavySmallpets = new schema({
+       image:[String],
        name:String,
-       size:Number,
+       size:String,
        life_span:Number,
        weight:Number,
        colors:String,
        price:Number,
-       temperament:String
-})
-module.exports=mongoose.model('heavySmallpet',heavySmallpet);
+       temperament:String},
+       {collection:"heavySmallpets"}
+)
+module.exports=mongoose.model('heavySmallpets',heavySmallpets);

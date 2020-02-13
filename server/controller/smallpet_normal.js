@@ -5,6 +5,22 @@ var router=express.Router();
 
 
 router.get('/normal',(req,res)=>{
-    mongoose.model('normalSmallpet').find()
-})
+    mongoose.model('normalSmallpets').find((error,result)=>{
+        if(error){
+                    console.log(error)
+                }
+                console.log(result)
+               
+                res.json(result)
+            })  })
+
+router.get("/details/:id",(req,res)=>{
+    mongoose.model("normalSmallpets").findOne({_id: req.params.id},(error,data)=>{
+        if(error){
+            console.log(error)
+        }
+        // console.log(data)
+        res.json(data)
+    }) 
+})            
 module.exports=router
