@@ -1,6 +1,9 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var fs = require("fs");
+var smallpet_heavy=require('./controller/smallpet_heavy')
+var smallpet_light=require('./controller/smallpet_light')
+var smallpet_normal=require('./controller/smallpet_normal')
 var app = express();
 var cors=require("cors")
 
@@ -11,6 +14,10 @@ app.use(cors());
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
 app.use("/PET-SHOP/light_cats", light_cats);
 app.use("/PET-SHOP/normal_cats", normal_cats);
+app.use(cors());
+app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
+app.use('/PET-SHOP/light_pet',smallpet_light)
+app.use('/PET-SHOP/normal_pet',smallpet_normal)
 
 
 app.use(express.static("public"));

@@ -45,10 +45,10 @@ const routes: Routes = [
   {path:'dogs/lightdogs',component:LightdogsComponent},
   {path:'dogs/normaldogs',component:NormaldogsComponent},
   {path:'dogs/heavydogs',component:HeavydogsComponent},
-  {path:'alldogdetails',component:AlldogdetailsComponent},
-  {path:'lightdogdetails',component:LightdogdetailsComponent},
-  {path:'normaldogdetails',component:NormaldogdetailsComponent},
-  {path:'heavydogdetails',component:HeavydogdetailsComponent},
+  {path:'alldogdetails/:_id',component:AlldogdetailsComponent},
+  {path:'lightdogdetails/:_id',component:LightdogdetailsComponent},
+  {path:'normaldogdetails/:_id',component:NormaldogdetailsComponent},
+  {path:'heavydogdetails/:_id',component:HeavydogdetailsComponent},
   {path:'smallpets/all',component:AllpetsComponent},
   {path:'smallpets/light',component:LightpetsComponent},
   {path:'smallpets/heavy',component:HeavypetsComponent},
@@ -60,6 +60,9 @@ const routes: Routes = [
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
   {path:'alldetail',component:AllpetsDetailsComponent},
+  {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
+  {path:'heavydetail/:_id',component:HeavypetsDetailsComponent},
+  {path:'normaldetail/:_id',component:NormalpetsDetailsComponent},
   {path:'lightdetail',component:LightpetsDetailsComponent},
   {path:'heavydetail',component:HeavypetsDetailsComponent},
   {path:'normaldetail',component:NormalpetsDetailsComponent},
@@ -75,9 +78,16 @@ const routes: Routes = [
 {path:'heavy-details',component:HeavyDetailsComponent},
 {path:'heavy-cats-details/:_id',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details/:_id',component:LightCatsDetailsComponent},
-{path:'normal-cats-details/:_id',component:NormalCatsDetailsComponent}
+{path:'normal-cats-details/:_id',component:NormalCatsDetailsComponent},
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},
+{path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
+{path:'light-cats-details',component:LightCatsDetailsComponent},
+{path:'normal-cats-details',component:NormalCatsDetailsComponent}
+
+// {path:'404',component:PageNotfoundComponent},
+// { path: '', component:PageNotfoundComponent},
+
     
 //     { path: '**', redirectTo: '404' }
 

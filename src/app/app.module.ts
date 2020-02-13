@@ -47,6 +47,10 @@ import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-ca
 import { HttpClientModule } from '@angular/common/http';
 
 
+import { SmallpetServiceService } from './services/smallpet-service.service';
+
+// import { HttpClient } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,8 +101,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+  
   ],
-  providers: [],
+  providers: [
+    SmallpetServiceService
+   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
