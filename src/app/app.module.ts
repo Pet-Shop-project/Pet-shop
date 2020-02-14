@@ -45,8 +45,6 @@ import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-
 import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { SmallpetServiceService } from './services/smallpet-service.service';
 import { HeavyCatAdminComponent } from './cat_admin/heavy-cat-admin/heavy-cat-admin.component';
 import { LightCatAdminComponent } from './cat_admin/light-cat-admin/light-cat-admin.component';
@@ -118,7 +116,7 @@ import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog
   
   ],
   providers: [
-    SmallpetServiceService
+    // SmallpetServiceService
    
   ],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AccessoriesService } from '../services/accessories.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accessories',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessoriesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private acc:AccessoriesService,private router:Router) { }
+  public accessories=[];
   ngOnInit() {
+    this.acc.listaccessories().subscribe(data=>{
+      this.accessories=data;
+    console.log(data);
+
+    })
   }
 
 }
