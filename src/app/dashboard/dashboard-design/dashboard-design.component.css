@@ -2,7 +2,14 @@
      font-family: MV Boli;
 }
 
-
+.main_container{
+   
+   width: 1300px;
+   height: 700px;
+   margin: 15px;
+   padding: 15px;
+   
+}
 
 
 .containn{
