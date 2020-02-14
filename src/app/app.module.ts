@@ -45,6 +45,8 @@ import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-
 import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SmallpetServiceService } from './services/smallpet-service.service';
+
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -97,8 +99,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+  
   ],
-  providers: [],
+  providers: [
+    // SmallpetServiceService
+   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
