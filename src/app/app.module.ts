@@ -44,8 +44,15 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-details.component';
 import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SmallpetServiceService } from './services/smallpet-service.service';
+import { HeavyCatAdminComponent } from './cat_admin/heavy-cat-admin/heavy-cat-admin.component';
+import { LightCatAdminComponent } from './cat_admin/light-cat-admin/light-cat-admin.component';
+import { NormalCatAdminComponent } from './cat_admin/normal-cat-admin/normal-cat-admin.component';
+import { DashboardDesignComponent } from './dashboard/dashboard-design/dashboard-design.component';
+import { HeavyDogAdminComponent } from './dog-admin/heavy-dog-admin/heavy-dog-admin.component';
+import { LightDogAdminComponent } from './dog-admin/light-dog-admin/light-dog-admin.component';
+import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog-admin.component';
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -92,16 +99,24 @@ import { SmallpetServiceService } from './services/smallpet-service.service';
     PageNotfoundComponent,
     HeavyCatsDetailsComponent,
     LightCatsDetailsComponent,
-    NormalCatsDetailsComponent
+    NormalCatsDetailsComponent,
+    HeavyCatAdminComponent,
+    LightCatAdminComponent,
+    NormalCatAdminComponent,
+    DashboardDesignComponent,
+    HeavyDogAdminComponent,
+    LightDogAdminComponent,
+    NormalDogAdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
+  
   ],
   providers: [
-    SmallpetServiceService
+    // SmallpetServiceService
    
   ],
   bootstrap: [AppComponent]

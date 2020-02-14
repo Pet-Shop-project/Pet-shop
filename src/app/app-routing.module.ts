@@ -13,11 +13,11 @@ import { AllpetsComponent } from "src/app/small pets/allpets/allpets.component";
 import { LightpetsComponent } from "src/app/small pets/lightpets/lightpets.component";
 import { HeavypetsComponent } from "src/app/small pets/heavypets/heavypets.component";
 import { NormalpetsComponent } from "src/app/small pets/normalpets/normalpets.component";
-import {AllCatsComponent}  from './Cats/all-cats/all-cats.component'
-import {LightCatsComponent} from './Cats/light-cats/light-cats.component'
-import{NormalCatsComponent} from './Cats/normal-cats/normal-cats.component'
-import {HeavyCatsComponent} from './Cats/heavy-cats/heavy-cats.component'
-import {CatsDetailsComponent} from './Cats/cats-details/cats-details.component'
+import {AllCatsComponent}  from './Cats/all-cats/all-cats.component';
+import {LightCatsComponent} from './Cats/light-cats/light-cats.component';
+import{NormalCatsComponent} from './Cats/normal-cats/normal-cats.component';
+import {HeavyCatsComponent} from './Cats/heavy-cats/heavy-cats.component';
+import {CatsDetailsComponent} from './Cats/cats-details/cats-details.component';
 import { AllpetsDetailsComponent } from "src/app/smallpets details/allpets-details/allpets-details.component";
 import { LightpetsDetailsComponent } from "src/app/smallpets details/lightpets-details/lightpets-details.component";
 import { HeavypetsDetailsComponent } from "src/app/smallpets details/heavypets-details/heavypets-details.component";
@@ -38,6 +38,13 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import {HeavyCatsDetailsComponent} from './Cats/heavy-cats-details/heavy-cats-details.component'
 import {LightCatsDetailsComponent} from './Cats/light-cats-details/light-cats-details.component'
 import {NormalCatsDetailsComponent} from './Cats/normal-cats-details/normal-cats-details.component'
+import {HeavyCatAdminComponent} from '../app/cat_admin/heavy-cat-admin/heavy-cat-admin.component'
+import {LightCatAdminComponent} from '../app/cat_admin/light-cat-admin/light-cat-admin.component'
+import {NormalCatAdminComponent} from './cat_admin/normal-cat-admin/normal-cat-admin.component'
+import {HeavyDogAdminComponent} from './dog-admin/heavy-dog-admin/heavy-dog-admin.component'
+import {LightDogAdminComponent} from './dog-admin/light-dog-admin/light-dog-admin.component'
+import {NormalDogAdminComponent} from'./dog-admin/normal-dog-admin/normal-dog-admin.component'
+import {DashboardDesignComponent} from './dashboard/dashboard-design/dashboard-design.component'
 const routes: Routes = [
   {path:'',component:SliderComponent},
   {path:'accessories',component:AccessoriesComponent},
@@ -76,13 +83,27 @@ const routes: Routes = [
 {path:'light-details',component:LightlDetailsComponent},
 {path:'all-details',component:AllDetailsComponent},
 {path:'heavy-details',component:HeavyDetailsComponent},
+{path:'heavy-cats-details/:_id',component:HeavyCatsDetailsComponent},
+{path:'light-cats-details/:_id',component:LightCatsDetailsComponent},
+{path:'normal-cats-details/:_id',component:NormalCatsDetailsComponent},
+// {path:'404',component:PageNotfoundComponent},
+// { path: '', component:PageNotfoundComponent},
 {path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details',component:LightCatsDetailsComponent},
-{path:'normal-cats-details',component:NormalCatsDetailsComponent}
+{path:'normal-cats-details',component:NormalCatsDetailsComponent},
+{path:'heavy-cat-admin',component:HeavyCatAdminComponent},
+{path:'light-cat-admin',component:LightCatAdminComponent},
+{path:'normal-cat-admin',component:NormalCatAdminComponent},
+{path:'heavy-dog-admin',component:HeavyDogAdminComponent},
+{path:'light-dog-admin',component:LightDogAdminComponent},
+{path:'normal-dog-admin',component:NormalDogAdminComponent},
+{path:'dashboard',component:DashboardDesignComponent}
+
+
+
 
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},
-
     
 //     { path: '**', redirectTo: '404' }
 
