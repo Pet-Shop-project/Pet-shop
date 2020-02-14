@@ -59,7 +59,7 @@ const routes: Routes = [
   {path:'normal-cats',component:NormalCatsComponent},
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
-  {path:'alldetail',component:AllpetsDetailsComponent},
+  {path:'alldetail/:_id',component:AllpetsDetailsComponent},
   {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
   {path:'heavydetail/:_id',component:HeavypetsDetailsComponent},
   {path:'normaldetail/:_id',component:NormalpetsDetailsComponent},

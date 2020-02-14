@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./lightpets.component.css']
 })
 export class LightpetsComponent implements OnInit {
-public lightsmallpet=[]
+public smallpet=[]
   constructor(private getLightpet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {
     this.getLightpet.getlightpet().subscribe(data =>
-      this.lightsmallpet=data
+      this.smallpet=data
      
     );
-    console.log(this.lightsmallpet)
+    console.log(this.smallpet)
   }
   showdetails(light){
     this.router.navigate(["/lightdetail",light._id])

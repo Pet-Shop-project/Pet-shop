@@ -4,7 +4,7 @@
       <div class="row" style="margin-left: 40px;">
         <div class="col-sm-12">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" >
               <div class="carousel-item active">
                 <img class="d-block w-100" src="{{pet.image[0]}}" alt="First slide"
                   style="width: 600px;height: 400px;">
@@ -88,7 +88,7 @@
           <a href="#" class="action-button shadow animate blue">Add To cart</a>
           <a href="#" class="action-button shadow animate yellow">Add wishlist</a>
           <br>
-         <a class="action-button shadow animate black" style="margin-left: 150px;cursor: pointer;" (click)="back()">Back</a>
+         <a class="action-button shadow animate black" style="margin-left: 150px;cursor: pointer;" (click)="back()" routerLink="/smallpets/heavy">Back</a>
         </div>
       </div>
     </div>
