@@ -44,7 +44,10 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-details.component';
 import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
+import { BirdsService } from './birds.service';
 import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs';
+
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -98,7 +101,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers:[BirdsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
