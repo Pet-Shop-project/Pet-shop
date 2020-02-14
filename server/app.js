@@ -7,15 +7,14 @@ var lightdogs = require("./controller/lightdogs");
 var normaldogs = require("./controller/normaldogs");
 var heavydogs = require("./controller/heavydogs");
 var alldogs = require("./controller/alldogs");
+var accessories = require("./controller/accessories");
 
 app.use(cors());
-app.use("/PET-SHOP/lightdogs",lightdogs)
-app.use("/PET-SHOP/normaldogs",normaldogs)
-app.use("/PET-SHOP/heavydogs",heavydogs)
-app.use("/PET-SHOP/alldogs",alldogs)
-
-
-
+app.use("/PET-SHOP/lightdogs", lightdogs)
+app.use("/PET-SHOP/normaldogs", normaldogs)
+app.use("/PET-SHOP/heavydogs", heavydogs)
+app.use("/PET-SHOP/alldogs", alldogs)
+app.use("/PET-SHOP/accessories",accessories)
 
 
 app.use(express.static("public"));
@@ -39,18 +38,18 @@ mongoose.connect("mongodb+srv://petshop:AAAAA@cluster0-mv8zv.mongodb.net/Pet_sho
 
 
 mongoose.connection.on("error", err => {
-    console.error(`MongoDB connection error: ${err}`);
-    process.exit(1);
-  });
+  console.error(`MongoDB connection error: ${err}`);
+  process.exit(1);
+});
 
 
 
-  var files_arr = fs.readdirSync(__dirname + "/model");
+var files_arr = fs.readdirSync(__dirname + "/model");
 files_arr.forEach(function (file) {
   require(__dirname + "/model/" + file);
 });
 
-  app.listen(3000, function () {
-    console.log("server on port 3000");
-  
-  });
+app.listen(3000, function () {
+  console.log("server on port 3000");
+
+});

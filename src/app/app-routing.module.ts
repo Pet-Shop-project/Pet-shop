@@ -13,11 +13,11 @@ import { AllpetsComponent } from "src/app/small pets/allpets/allpets.component";
 import { LightpetsComponent } from "src/app/small pets/lightpets/lightpets.component";
 import { HeavypetsComponent } from "src/app/small pets/heavypets/heavypets.component";
 import { NormalpetsComponent } from "src/app/small pets/normalpets/normalpets.component";
-import {AllCatsComponent}  from './Cats/all-cats/all-cats.component'
-import {LightCatsComponent} from './Cats/light-cats/light-cats.component'
-import{NormalCatsComponent} from './Cats/normal-cats/normal-cats.component'
-import {HeavyCatsComponent} from './Cats/heavy-cats/heavy-cats.component'
-import {CatsDetailsComponent} from './Cats/cats-details/cats-details.component'
+import {AllCatsComponent}  from './Cats/all-cats/all-cats.component';
+import {LightCatsComponent} from './Cats/light-cats/light-cats.component';
+import{NormalCatsComponent} from './Cats/normal-cats/normal-cats.component';
+import {HeavyCatsComponent} from './Cats/heavy-cats/heavy-cats.component';
+import {CatsDetailsComponent} from './Cats/cats-details/cats-details.component';
 import { AllpetsDetailsComponent } from "src/app/smallpets details/allpets-details/allpets-details.component";
 import { LightpetsDetailsComponent } from "src/app/smallpets details/lightpets-details/lightpets-details.component";
 import { HeavypetsDetailsComponent } from "src/app/smallpets details/heavypets-details/heavypets-details.component";

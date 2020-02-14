@@ -1,13 +1,20 @@
-<div class="container contstyle">
-  <div class="row">
-    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let accessory of accessories" (click)="onSelect(accessory)">
-      <div class="img-container m-0 p-0 shadow-sm">
-        <img src="{{accessory.images[0]}}" class="img-center img-fluid img-showcase">
-        <div class="overlay d-flex flex-column align-items-center justify-content-center">
-          <h2>{{accessory.name}}</h2>
-          <p class="d-block small ">{{accessory.price}} EGP</p>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="col-md-4 mt-4" *ngFor="let accessory of accessories">
+      <div class="card profile-card-5" >
+          <div class="card-img-block">
+              <img class="card-img-top" src="{{accessory.image}}" alt="Card image cap">
+          </div>
+              <div class="card-body pt-0">
+              <h4 class="card-title">{{accessory.name}}</h4>
+              <h5 class="card-text">Price: {{accessory.price}} $</h5>
+              <h5 class="card-text">Length: {{accessory.length}} cm</h5>
+              <h5 class="card-text">Color: {{accessory.color}}</h5>
+              <a href="#" class="action-button shadow animate blue">cart</a>
+              <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">wishlist</a>
+              
+            </div>
+          </div>
+  </div>
   </div>
 </div>
