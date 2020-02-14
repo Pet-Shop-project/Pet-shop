@@ -90,7 +90,6 @@ const routes: Routes = [
 // { path: '', component:PageNotfoundComponent},
 {path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details',component:LightCatsDetailsComponent},
-<<<<<<< HEAD
 {path:'normal-cats-details',component:NormalCatsDetailsComponent},
 {path:'heavy-cat-admin',component:HeavyCatAdminComponent},
 {path:'light-cat-admin',component:LightCatAdminComponent},
@@ -103,9 +102,6 @@ const routes: Routes = [
 
 
 
-=======
-{path:'normal-cats-details',component:NormalCatsDetailsComponent}
->>>>>>> 49e5b38d85f1f967676fc25080ea1729a97949d1
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},
     
