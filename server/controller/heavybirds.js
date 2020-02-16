@@ -8,13 +8,13 @@ var parseUrlencoded = bodyParser.urlencoded({
   extended: true
 });
 route.get('/list',function(req,resp){
-    mongoose.model('heavybirds').find(function (err, data) {
+    mongoose.model('heavy_birds').find(function (err, data) {
          resp.json(data);
 
   })
   })
   route.get('/details/:_id', function (req, resp) {
-    mongoose.model("heavybirds").findOne({
+    mongoose.model("heavy_birds").findOne({
       _id: req.params._id
     }, function (err, data) {
       resp.json(data);

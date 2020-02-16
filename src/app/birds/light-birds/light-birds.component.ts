@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BirdsService } from 'src/app/services/birds.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-light-birds',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./light-birds.component.css']
 })
 export class LightBirdsComponent implements OnInit {
+ public birds:[];
 
-  constructor() { }
+  constructor(private bird:BirdsService,private route:Router) { }
 
   ngOnInit() {
+    this.bird.listlightd().subscribe(data=>{
+      this.birds=data;
+      console.log(data)
+    })
+  }
   }
 
-}
+

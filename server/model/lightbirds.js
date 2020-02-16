@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-var lightdogs = new Schema({
+var lightbirds = new Schema({
     name:String,
     size:String,
     life_span:Number,
@@ -9,7 +9,7 @@ var lightdogs = new Schema({
     price:Number,
     temperament:String,
     images:[String]},
-    {collection:"lightbirdss"}
+    {collection:"light_birds"}
 
 );
 mongoose.model("lightbirds",lightbirds);

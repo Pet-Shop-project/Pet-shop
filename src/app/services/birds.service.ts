@@ -5,21 +5,22 @@ import { Birds } from '../birds'
 @Injectable({
   providedIn: 'root'
 })
-export class DogsService {
+export class BirdsService {
   constructor(private http:HttpClient) { }
   listlightd():Observable<any>{
   return this.http.get<any>("http://localhost:3000/PET-SHOP/lightbirds/list/")
   }
-  listnormaldog():Observable<any>{
+  listnormalbird():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/normalbirds/list/")
   }
-  listheavydog():Observable<any>{
-    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavybirds/list/")
+
+listheavy():Observable<any>{
+  return this.http.get<any>("http://localhost:3000/PET-SHOP/heavybirds/list/")
+}
+  listallbirds():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/list/") 
   }
-  listalldog():Observable<any>{
-    return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/list/")
-  }
-  lightdogdetails(_id){
+  lightbirddetails(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/lightbirds/lightbirdsdetails/"+_id)
   }
   heavydetails(_id){
@@ -29,6 +30,6 @@ export class DogsService {
     return this.http.get<any>("http://localhost:3000/PET-SHOP/normalbirds/details/"+_id)
   }
   alldetails(_id){
-    return this.http.get<any>("http://localhost:3000/PET-SHOP/alldogs/details/"+_id)
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/details/"+_id)
   }
 }
