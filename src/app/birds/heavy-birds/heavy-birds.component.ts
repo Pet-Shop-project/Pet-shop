@@ -15,8 +15,11 @@ public birds:[];
   ngOnInit() {
     this.bird.listheavy().subscribe(data=>{
       this.birds=data;
-      console.log(data)
+      // console.log(data)
     })
   }
-
+  showdetails(bird){
+    this.route.navigate(["/heavy-details",bird._id])
+    }
 }
+

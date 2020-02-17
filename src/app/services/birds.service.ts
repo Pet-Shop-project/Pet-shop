@@ -6,6 +6,9 @@ import { Birds } from '../birds'
   providedIn: 'root'
 })
 export class BirdsService {
+  // getheavydetails(heavyid: any) {
+  //   throw new Error("Method not implemented.");
+  // }
   constructor(private http:HttpClient) { }
   listlightd():Observable<any>{
   return this.http.get<any>("http://localhost:3000/PET-SHOP/lightbirds/list/")

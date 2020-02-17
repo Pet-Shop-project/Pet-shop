@@ -8,9 +8,9 @@ import { BirdsService } from 'src/app/services/birds.service';
   styleUrls: ['./all-birds.component.css']
 })
 export class AllBirdsComponent implements OnInit {
- public bird: [];
 
-  constructor(private birds:BirdsService,private route:Router) { }
+public birds=[];
+  constructor(private bird:BirdsService,private route:Router) { }
 
   ngOnInit() {
     this.bird.listallbirds().subscribe(data=>{
@@ -19,7 +19,13 @@ export class AllBirdsComponent implements OnInit {
     })
   
   }
-
+  showdetails(bird){
+    this.route.navigate(["/all-details",bird._id])
+    }
   }
+
+  
+
+  
 
 

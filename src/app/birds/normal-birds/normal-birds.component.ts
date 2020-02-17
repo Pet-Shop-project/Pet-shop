@@ -19,5 +19,9 @@ export class NormalBirdsComponent implements OnInit {
     })
   
   }
-
+  showdetails(bird){
+    this.route.navigate(["/normal-details",bird._id])
+    }
 }
+  
+

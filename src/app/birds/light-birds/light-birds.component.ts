@@ -18,6 +18,10 @@ export class LightBirdsComponent implements OnInit {
       console.log(data)
     })
   }
-  }
+  showdetails(bird){
+    this.route.navigate(["/light-details",bird._id])
+    }
+}
+  
 
 
