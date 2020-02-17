@@ -53,6 +53,8 @@ import { DashboardDesignComponent } from './dashboard/dashboard-design/dashboard
 import { HeavyDogAdminComponent } from './dog-admin/heavy-dog-admin/heavy-dog-admin.component';
 import { LightDogAdminComponent } from './dog-admin/light-dog-admin/light-dog-admin.component';
 import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog-admin.component';
+import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
+import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -106,7 +108,9 @@ import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog
     DashboardDesignComponent,
     HeavyDogAdminComponent,
     LightDogAdminComponent,
-    NormalDogAdminComponent
+    NormalDogAdminComponent,
+    AllCatDetailsComponent,
+    DashboardNavbarComponent
   ],
   imports: [
     BrowserModule,

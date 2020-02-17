@@ -1,1 +1,22 @@
-<div>heavy cat</div>>
+<app-dashboard-navbar></app-dashboard-navbar>
+
+<div class="container">
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="col-md-4 mt-4" *ngFor="let cat of cats">
+      <div class="card profile-card-5" >
+          <div class="card-img-block">
+              <img class="card-img-top" src="{{cat.images[0]}}" alt="Card image cap">
+          </div>
+              <div class="card-body pt-0">
+              <h4 class="card-title">{{cat.name}}</h4>
+              <h5 class="card-text">Price: {{cat.price}} $</h5>
+              <h5 class="card-text">coat: {{cat.coat}} cm</h5>
+              <h5 class="card-text">Color: {{cat.color}}</h5>
+              <a href="#" class="action-button shadow animate blue">Edit</a>
+              <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">Delete</a>
+              
+            </div>
+          </div>
+  </div>
+  </div>
+</div>

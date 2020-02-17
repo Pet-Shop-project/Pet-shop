@@ -14,7 +14,8 @@ export class HeavyCatsComponent implements OnInit {
   ngOnInit() {
     this.catsServ.get_heavy_cats().subscribe(data=>{
       this.cats=data;
-  })}
+  })
+}
 
 
   onSelect(cat){

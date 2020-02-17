@@ -1,0 +1,15 @@
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var allcats = new Schema({
+    name:String,
+    size:Number,
+    life_span:Number,
+    weight:Number,
+    colors:String,
+    price:Number,
+    coat:String,
+    images:[String]
+},
+{collection:"all-cats"}
+);
+mongoose.model("allcats",allcats);
