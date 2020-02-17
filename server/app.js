@@ -3,6 +3,8 @@ var mongoose = require("mongoose");
 var fs = require("fs");
 var cors = require('cors');
 var app = express();
+var bodyParser = require('body-parser')
+
 
 var lightdogs = require("./controller/lightdogs");
 var normaldogs = require("./controller/normaldogs");
@@ -15,12 +17,18 @@ var smallpet_normal=require('./controller/smallpet_normal')
 let heavy_cats=require("./controller/heavy-cats")
 let light_cats=require("./controller/light-cats")
 let normal_cats=require('./controller/normal-cats')
+var user=require('./controller/user')
 
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cors());
-app.use("/PET-SHOP/lightdogs", lightdogs)
-app.use("/PET-SHOP/normaldogs", normaldogs)
-app.use("/PET-SHOP/heavydogs", heavydogs)
-app.use("/PET-SHOP/alldogs", alldogs)
+
+app.use("/PET-SHOP/lightdogs", lightdogs);
+app.use("/PET-SHOP/normaldogs", normaldogs);
+app.use("/PET-SHOP/heavydogs", heavydogs);
+app.use("/PET-SHOP/alldogs", alldogs);
 app.use("/PET-SHOP/accessories",accessories)
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
 app.use("/PET-SHOP/light_cats", light_cats);
@@ -28,6 +36,7 @@ app.use("/PET-SHOP/normal_cats", normal_cats);
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy);
 app.use('/PET-SHOP/light_pet',smallpet_light);
 app.use('/PET-SHOP/normal_pet',smallpet_normal);
+app.use("/PET-SHOP/user", user);
 
 
 app.use(express.static("public"));
@@ -47,7 +56,9 @@ app.all("*", (req, resp, next) => {
 app.set("viewengine", "ejs");
 app.set("views", "./views");
 // mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://petshop:AAAAA@cluster0-mv8zv.mongodb.net/Pet_shop?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://petshop:AAAAA@cluster0-mv8zv.mongodb.net/Pet_shop?retryWrites=true&w=majority",{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=> console.log("Up"))
+.then(()=>console.log("Database Connected"));
+
 
 
 
@@ -63,7 +74,7 @@ var files_arr = fs.readdirSync(__dirname + "/model");
 files_arr.forEach(function (file) {
   require(__dirname + "/model/" + file);
 });
-
+app.use(express.urlencoded ({extended : false}));
 app.listen(3000, function () {
   console.log("server on port 3000");
 

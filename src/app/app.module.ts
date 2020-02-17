@@ -46,6 +46,7 @@ import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SmallpetServiceService } from './services/smallpet-service.service';
+import { AuthenticationService } from './services/authentication.service';
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -103,7 +104,7 @@ import { SmallpetServiceService } from './services/smallpet-service.service';
   ],
   providers: [
     // SmallpetServiceService
-   
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
