@@ -38,7 +38,18 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import {HeavyCatsDetailsComponent} from './Cats/heavy-cats-details/heavy-cats-details.component'
 import {LightCatsDetailsComponent} from './Cats/light-cats-details/light-cats-details.component'
 import {NormalCatsDetailsComponent} from './Cats/normal-cats-details/normal-cats-details.component'
+import {HeavyCatAdminComponent} from '../app/cat_admin/heavy-cat-admin/heavy-cat-admin.component'
+import {LightCatAdminComponent} from '../app/cat_admin/light-cat-admin/light-cat-admin.component'
+import {NormalCatAdminComponent} from './cat_admin/normal-cat-admin/normal-cat-admin.component'
+import {HeavyDogAdminComponent} from './dog-admin/heavy-dog-admin/heavy-dog-admin.component'
+import {LightDogAdminComponent} from './dog-admin/light-dog-admin/light-dog-admin.component'
+import {NormalDogAdminComponent} from'./dog-admin/normal-dog-admin/normal-dog-admin.component'
+import {DashboardDesignComponent} from './dashboard/dashboard-design/dashboard-design.component'
+import {AllCatDetailsComponent} from './Cats/all-cat-details/all-cat-details.component'
+
 const routes: Routes = [
+  
+
   {path:'',component:SliderComponent},
   {path:'accessories',component:AccessoriesComponent},
   {path:'dogs/alldogs',component:AlldogsComponent},
@@ -46,6 +57,8 @@ const routes: Routes = [
   {path:'dogs/normaldogs',component:NormaldogsComponent},
   {path:'dogs/heavydogs',component:HeavydogsComponent},
   {path:'alldogdetails/:_id',component:AlldogdetailsComponent},
+  {path:'all-cat-details/:_id',component:AllCatDetailsComponent},
+
   {path:'lightdogdetails/:_id',component:LightdogdetailsComponent},
   {path:'normaldogdetails/:_id',component:NormaldogdetailsComponent},
   {path:'heavydogdetails/:_id',component:HeavydogdetailsComponent},
@@ -59,6 +72,7 @@ const routes: Routes = [
   {path:'normal-cats',component:NormalCatsComponent},
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
+  
   {path:'alldetail',component:AllpetsDetailsComponent},
   {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
   {path:'heavydetail/:_id',component:HeavypetsDetailsComponent},
@@ -83,7 +97,18 @@ const routes: Routes = [
 // { path: '', component:PageNotfoundComponent},
 {path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details',component:LightCatsDetailsComponent},
-{path:'normal-cats-details',component:NormalCatsDetailsComponent}
+{path:'normal-cats-details',component:NormalCatsDetailsComponent},
+{path:'heavy-cat-admin',component:HeavyCatAdminComponent},
+{path:'light-cat-admin',component:LightCatAdminComponent},
+{path:'normal-cat-admin',component:NormalCatAdminComponent},
+{path:'heavy-dog-admin',component:HeavyDogAdminComponent},
+{path:'light-dog-admin',component:LightDogAdminComponent},
+{path:'normal-dog-admin',component:NormalDogAdminComponent},
+{path:'dashboard',component:DashboardDesignComponent}
+
+
+
+
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},
     

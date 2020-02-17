@@ -1,77 +1,88 @@
    
-  <nav class="navbar navbar-expand-sm navcolor navbar-dark">
-    <a class="navbar-brand" href="#">
-      <img src="https://cdn5.vectorstock.com/i/1000x1000/81/29/pet-shop-logo-template-original-design-colorful-vector-17888129.jpg" >
-    </a>
-  
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link navMARG" routerLink="/">HOME</a>
-      </li>
      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          CATS
-        </a>
-        <div class="dropdown-menu style">
-          <div class="divMenu">
-          <a class="dropdown-item itemStyle" routerLink="/all-cats">ALL</a>
-          </div>
-          <div class="divMenu">
-          <a class="dropdown-item itemStyle" routerLink="/light-cats">LIGHT WEIGHT</a>
-          </div>
-          <div class="divMenu">
-          <a class="dropdown-item itemStyle" routerLink="/normal-cats">NORMAL WEIGHT</a>
-          </div>
-          <div class="divMenu">
-          <a class="dropdown-item itemStyle" routerLink="/heavy-cats">HEAVY WEIGHT</a>
-          </div>
-        </div>
-      </li>
+<nav class="menu" *ngIf="nav.visible">
+  <ol>
+    <li class="menu-item"><a routerLink="/">HOME</a></li>
+    
+    <li class="menu-item">
+      <a >Cats</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a routerLink="/all-cats">All</a></li>
+        <li class="menu-item"><a routerLink="/light-cats">Light cats</a></li>
+        <li class="menu-item"><a routerLink="/normal-cats">Medium cats</a></li>
+        <li class="menu-item"><a routerLink="/heavy-cats">Heavy cats</a></li>
+        
+        
+      </ol>
+    </li>
+    
+    <li class="menu-item">
+      <a >Dogs</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a routerLink="dogs/alldogs">All</a></li>
+        <li class="menu-item"><a routerLink="dogs/lightdogs">light dogs</a></li>
+        <li class="menu-item"><a routerLink="dogs/normaldogs">Medium dogs</a></li>
+        <li class="menu-item"><a routerLink="dogs/heavydogs">Heavy dogs</a></li>
+        
+        
+        
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          DOGS
-        </a>
-        <div class="dropdown-menu style">
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="dogs/alldogs">ALL</a>
-            </div>
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="dogs/lightdogs">LIGHT WEIGHT</a>
-            </div>
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="dogs/normaldogs">NORMAL WEIGHT</a>
-            </div>
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="dogs/heavydogs">HEAVY WEIGHT</a>
-            </div>
-          </div>
-        </li>
+      </ol>
+    </li>
+  
+    <li class="menu-item">
+      <a >Birds</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a routerLink="/all-birds">All</a></li>
+        <li class="menu-item"><a routerLink="/light-birds">Light birds</a></li>
+        <li class="menu-item"><a routerLink="/normal-birds">Medium birds
+        </a></li>
+        <li class="menu-item"><a routerLink="/heavy-birds">Heavy birds</a></li>
+        
+        
+        
+      </ol>
+    </li>
+    
+    <li class="menu-item">
+      <a href="#0">Small pets</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a routerLink='smallpets/all'>All</a></li>
+        <li class="menu-item"><a routerLink='smallpets/light'>Light pets</a></li>
+        <li class="menu-item"><a routerLink='smallpets/normal'>Mediun pets</a></li>
+        <li class="menu-item"><a routerLink='smallpets/heavy'>Heavy pets</a></li>
+        
+        
+        
+      </ol>
+    </li>
+    <li class="menu-item"><a routerLink="/accessories">Accssesories</a></li>
+    <li class="menu-item"><a routerLink="dashboard"><i class="fas fa-user-cog"></i></a></li>
+    <li class="menu-item">
+      <a class="menu-item" routerLink="/user/Login"><i class="fas fa-user-plus"></i></a>
+    </li>
+  </ol>
+  
+</nav>
+<br>
+  <br>
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          BIRDS
-        </a>
-        <div class="dropdown-menu style">
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="/all-birds">ALL</a>
-            </div>
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="/light-birds">LIGHT WEIGHT</a>
-            </div>
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle"routerLink="/normal-birds">NORMAL WEIGHT</a>
-            </div>
-            <div class="divMenu">
-            <a class="dropdown-item itemStyle" routerLink="/heavy-birds">HEAVY WEIGHT</a>
-            </div>
-          </div>
-        </li>
   
 
-      <li class="nav-item dropdown">
+
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           SMALL PETS
         </a>
@@ -99,5 +110,4 @@
         <a class="nav-link navMARG" routerLink="/user/Login"><i class="fas fa-user-plus"></i></a>
       </li>
     </ul>
-  </nav>
-  
+  </nav> --> 

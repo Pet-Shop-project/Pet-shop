@@ -1,6 +1,7 @@
 
-  <div class="row">
-    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of cats" (click)="onSelect(cat)">
+  <div class="row " >
+    
+    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of cats" (click)="onSelect(cat)"  style="border-radius: 25px;">
       <div class="img-container m-0 p-0 shadow-sm">
         <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase">
         <div class="overlay d-flex flex-column align-items-center justify-content-center">
@@ -10,6 +11,8 @@
       </div>
     </div>
   </div>
+  
+  
 
 
 
