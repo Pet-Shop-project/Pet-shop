@@ -1,54 +1,70 @@
    
      
-<nav class="menu">
+<nav class="menu" *ngIf="nav.visible">
   <ol>
     <li class="menu-item"><a routerLink="/">HOME</a></li>
     
     <li class="menu-item">
-      <a href="#0">Cats</a>
+      <a >Cats</a>
       <ol class="sub-menu">
-        
-        <li class="menu-item"><a routerLink="/heavy-cats">Heavy cats</a></li>
-        <li class="menu-item"><a routerLink="/light-cats">Light cats</a></li>
-        <li class="menu-item"><a routerLink="/normal-cats">Normal cats</a></li>
         <li class="menu-item"><a routerLink="/all-cats">All</a></li>
+        <li class="menu-item"><a routerLink="/light-cats">Light cats</a></li>
+        <li class="menu-item"><a routerLink="/normal-cats">Medium cats</a></li>
+        <li class="menu-item"><a routerLink="/heavy-cats">Heavy cats</a></li>
+        
+        
       </ol>
     </li>
     
     <li class="menu-item">
-      <a href="#0">Dogs</a>
+      <a >Dogs</a>
       <ol class="sub-menu">
-        <li class="menu-item"><a routerLink="dogs/heavydogs">Heavy dogs</a></li>
-        <li class="menu-item"><a routerLink="dogs/lightdogs">light dogs</a></li>
-        <li class="menu-item"><a routerLink="dogs/normaldogs">Normal dogs</a></li>
         <li class="menu-item"><a routerLink="dogs/alldogs">All</a></li>
+        <li class="menu-item"><a routerLink="dogs/lightdogs">light dogs</a></li>
+        <li class="menu-item"><a routerLink="dogs/normaldogs">Medium dogs</a></li>
+        <li class="menu-item"><a routerLink="dogs/heavydogs">Heavy dogs</a></li>
+        
+        
+        
+
       </ol>
     </li>
   
     <li class="menu-item">
-      <a href="#0">Birds</a>
+      <a >Birds</a>
       <ol class="sub-menu">
-        <li class="menu-item"><a routerLink="/heavy-birds">Heavy birds</a></li>
-        <li class="menu-item"><a routerLink="/light-birds">Light birds</a></li>
-        <li class="menu-item"><a routerLink="/normal-birds">Normal birds
-        </a></li>
         <li class="menu-item"><a routerLink="/all-birds">All</a></li>
+        <li class="menu-item"><a routerLink="/light-birds">Light birds</a></li>
+        <li class="menu-item"><a routerLink="/normal-birds">Medium birds
+        </a></li>
+        <li class="menu-item"><a routerLink="/heavy-birds">Heavy birds</a></li>
+        
+        
+        
       </ol>
     </li>
     
     <li class="menu-item">
       <a href="#0">Small pets</a>
       <ol class="sub-menu">
-        <li class="menu-item"><a routerLink='smallpets/heavy'>Heavy pets</a></li>
-        <li class="menu-item"><a routerLink='smallpets/light'>Light pets</a></li>
-        <li class="menu-item"><a routerLink='smallpets/normal'>Normal pets</a></li>
         <li class="menu-item"><a routerLink='smallpets/all'>All</a></li>
+        <li class="menu-item"><a routerLink='smallpets/light'>Light pets</a></li>
+        <li class="menu-item"><a routerLink='smallpets/normal'>Mediun pets</a></li>
+        <li class="menu-item"><a routerLink='smallpets/heavy'>Heavy pets</a></li>
+        
+        
+        
       </ol>
     </li>
     <li class="menu-item"><a routerLink="/accessories">Accssesories</a></li>
     <li class="menu-item"><a routerLink="dashboard"><i class="fas fa-user-cog"></i></a></li>
   </ol>
+  
 </nav>
+<br>
+  <br>
+ 
+ 
   
 
   

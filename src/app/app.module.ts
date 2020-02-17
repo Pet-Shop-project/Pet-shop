@@ -59,6 +59,8 @@ import { AccessoriesAdminComponent } from './Admin accessories/accessories-admin
 import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
 import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
 import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
+import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
+import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -118,7 +120,9 @@ import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-ad
     AccessoriesAdminComponent,
     AccessoriesAdminAddformComponent,
     SmallpetAdminAddformComponent,
-    BirdsAdminAddformComponent
+    BirdsAdminAddformComponent,
+    AllCatDetailsComponent,
+    DashboardNavbarComponent
   ],
   imports: [
     BrowserModule,

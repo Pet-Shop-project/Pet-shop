@@ -13,10 +13,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+ border-radius: 25px;
   }
   .img-container {
       display: block;
       position: relative;
+     
   }
   .link-overlay {
     color: #fff;

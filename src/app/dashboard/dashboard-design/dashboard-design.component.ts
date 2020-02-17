@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavbarService} from '../../services/navbar.service'
 
 @Component({
   selector: 'app-dashboard-design',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardDesignComponent implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavbarService ) { }
 
   ngOnInit() {
-  }
-
-}
+  this.nav.hide()
+}}

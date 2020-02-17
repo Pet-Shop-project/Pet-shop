@@ -51,7 +51,11 @@ import { CatAdminAddformComponent } from './cat_admin/cat-admin-addform/cat-admi
 import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
 import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
 import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
+import {AllCatDetailsComponent} from './Cats/all-cat-details/all-cat-details.component'
+
 const routes: Routes = [
+  
+
   {path:'',component:SliderComponent},
   {path:'accessories',component:AccessoriesComponent},
   {path:'dogs/alldogs',component:AlldogsComponent},
@@ -59,6 +63,8 @@ const routes: Routes = [
   {path:'dogs/normaldogs',component:NormaldogsComponent},
   {path:'dogs/heavydogs',component:HeavydogsComponent},
   {path:'alldogdetails/:_id',component:AlldogdetailsComponent},
+  {path:'all-cat-details/:_id',component:AllCatDetailsComponent},
+
   {path:'lightdogdetails/:_id',component:LightdogdetailsComponent},
   {path:'normaldogdetails/:_id',component:NormaldogdetailsComponent},
   {path:'heavydogdetails/:_id',component:HeavydogdetailsComponent},
@@ -73,6 +79,8 @@ const routes: Routes = [
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
   {path:'alldetail/:_id',component:AllpetsDetailsComponent},
+  
+  {path:'alldetail',component:AllpetsDetailsComponent},
   {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
   {path:'heavydetail/:_id',component:HeavypetsDetailsComponent},
   {path:'normaldetail/:_id',component:NormalpetsDetailsComponent},

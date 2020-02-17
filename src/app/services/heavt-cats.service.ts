@@ -47,6 +47,13 @@ export class HeavtCatsService {
   light_cats_details(_id):Observable<any>{
     return this.http.get<any>('http://localhost:3000/PET-SHOP/light_cats/details/'+_id);
   }
+
+  listallcats():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/list/")
+  }
+  all_details(_id){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/details/"+_id)
+  }
 }
 
 
