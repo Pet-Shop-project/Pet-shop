@@ -10,7 +10,11 @@
    padding: 15px;
    
 }
-
+.conn{
+   width:500px;
+   height:500px;
+ 
+}
 
 .containn{
      height: 600px;
@@ -595,4 +599,7 @@ height: 500px;
   }
    
    
+ }
+ .menu{
+    margin-top: -70px;
  }

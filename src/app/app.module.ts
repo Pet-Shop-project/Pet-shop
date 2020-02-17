@@ -53,6 +53,12 @@ import { DashboardDesignComponent } from './dashboard/dashboard-design/dashboard
 import { HeavyDogAdminComponent } from './dog-admin/heavy-dog-admin/heavy-dog-admin.component';
 import { LightDogAdminComponent } from './dog-admin/light-dog-admin/light-dog-admin.component';
 import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog-admin.component';
+import { AddformAdminComponent } from './dog-admin/addform-admin/addform-admin.component';
+import { CatAdminAddformComponent } from './cat_admin/cat-admin-addform/cat-admin-addform.component';
+import { AccessoriesAdminComponent } from './Admin accessories/accessories-admin/accessories-admin.component';
+import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
+import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
+import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -106,7 +112,13 @@ import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog
     DashboardDesignComponent,
     HeavyDogAdminComponent,
     LightDogAdminComponent,
-    NormalDogAdminComponent
+    NormalDogAdminComponent,
+    AddformAdminComponent,
+    CatAdminAddformComponent,
+    AccessoriesAdminComponent,
+    AccessoriesAdminAddformComponent,
+    SmallpetAdminAddformComponent,
+    BirdsAdminAddformComponent
   ],
   imports: [
     BrowserModule,

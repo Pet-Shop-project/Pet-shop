@@ -12,13 +12,13 @@ export class AllpetsDetailsComponent implements OnInit {
 
   public allid;
   public pet=new Smallpets([""],"","",0,"","",0,"");
-    constructor(private getheavypet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router) { }
+    constructor(private getallpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router) { }
   
     ngOnInit() {
       this.detailroute.paramMap.subscribe((params:ParamMap)=>{
         this.allid=params.get("_id")
       })
-       this.getheavypet.getheavydetails(this.allid).subscribe(data =>{
+       this.getallpet.getalldetails(this.allid).subscribe(data =>{
         this.pet=data;
        })
         // console.log(this.lightdetails)
@@ -26,3 +26,4 @@ export class AllpetsDetailsComponent implements OnInit {
   
 
 }
+
