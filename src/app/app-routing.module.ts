@@ -45,6 +45,12 @@ import {HeavyDogAdminComponent} from './dog-admin/heavy-dog-admin/heavy-dog-admi
 import {LightDogAdminComponent} from './dog-admin/light-dog-admin/light-dog-admin.component'
 import {NormalDogAdminComponent} from'./dog-admin/normal-dog-admin/normal-dog-admin.component'
 import {DashboardDesignComponent} from './dashboard/dashboard-design/dashboard-design.component'
+import { AddformAdminComponent } from "./dog-admin/addform-admin/addform-admin.component";
+import { AccessoriesAdminComponent } from "src/app/Admin accessories/accessories-admin/accessories-admin.component";
+import { CatAdminAddformComponent } from './cat_admin/cat-admin-addform/cat-admin-addform.component';
+import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
+import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
+import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 import {AllCatDetailsComponent} from './Cats/all-cat-details/all-cat-details.component'
 import { AllbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/allbirds-admin/allbirds-admin.component';
 import { HeavybirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/heavybirds-admin/heavybirds-admin.component';
@@ -79,6 +85,7 @@ const routes: Routes = [
   {path:'normal-cats',component:NormalCatsComponent},
   {path:'heavy-cats',component:HeavyCatsComponent},
   {path:'details-cats',component:CatsDetailsComponent},
+  {path:'alldetail/:_id',component:AllpetsDetailsComponent},
   
   {path:'alldetail',component:AllpetsDetailsComponent},
   {path:'lightdetail/:_id',component:LightpetsDetailsComponent},
@@ -120,6 +127,12 @@ const routes: Routes = [
 {path:'lightsmall_admin',component:LightsmallAdminComponent},
 {path:'normalsmall_admin',component:NormalsmallAdminComponent},
 
+{path:'accessories_admin',component:AccessoriesAdminComponent},
+{path:'dog_addform',component:AddformAdminComponent},
+{path:'cat_addform',component:CatAdminAddformComponent},
+{path:'accessories_addform',component:AccessoriesAdminAddformComponent},
+{path:'smallpet_addform',component:SmallpetAdminAddformComponent},
+{path:'birds_addform',component:BirdsAdminAddformComponent}
 
 
 

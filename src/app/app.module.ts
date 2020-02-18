@@ -56,6 +56,12 @@ import { DashboardDesignComponent } from './dashboard/dashboard-design/dashboard
 import { HeavyDogAdminComponent } from './dog-admin/heavy-dog-admin/heavy-dog-admin.component';
 import { LightDogAdminComponent } from './dog-admin/light-dog-admin/light-dog-admin.component';
 import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog-admin.component';
+import { AddformAdminComponent } from './dog-admin/addform-admin/addform-admin.component';
+import { CatAdminAddformComponent } from './cat_admin/cat-admin-addform/cat-admin-addform.component';
+import { AccessoriesAdminComponent } from './Admin accessories/accessories-admin/accessories-admin.component';
+import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
+import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
+import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
 import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
 import { AllbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/allbirds-admin/allbirds-admin.component';
@@ -65,6 +71,11 @@ import { NormalbirdsAdminComponent } from './dashboard/dashboard-design/birds_da
 import { HeavysmallAdminComponent } from './dashboard/smallpets_dashbord/heavysmall-admin/heavysmall-admin.component';
 import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsmall-admin/lightsmall-admin.component';
 import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import {NgxPaginationModule} from 'ngx-pagination';
+// import { from } from 'rxjs';
+// import { MaterialModule } from './material/material.module';
+
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -119,6 +130,12 @@ import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normal
     HeavyDogAdminComponent,
     LightDogAdminComponent,
     NormalDogAdminComponent,
+    AddformAdminComponent,
+    CatAdminAddformComponent,
+    AccessoriesAdminComponent,
+    AccessoriesAdminAddformComponent,
+    SmallpetAdminAddformComponent,
+    BirdsAdminAddformComponent,
     AllCatDetailsComponent,
     DashboardNavbarComponent,
     AllbirdsAdminComponent,
@@ -133,7 +150,12 @@ import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normal
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    // NgxPaginationModule
+   
+    // MaterialModule
+    
   
   ],
  

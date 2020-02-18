@@ -145,3 +145,66 @@
 	  font-size:40px;
 	}
   }
+  
+
+h1{
+	font-size:50;   
+	font-family: MV Boli;
+	margin: auto;
+	text-align: center;
+	color:black;
+	margin: 30px;
+   }
+   i{
+	   color:darkorange;
+	   font-size: 50px;
+   }
+   .mpdi_p{
+	   margin-top: 150px;
+	   color: black;
+   }
+   p{
+	   text-align: center;
+	   font-size: large;
+	   font-family:MV Boli ; 
+	   
+   }
+   .first_icon{
+	 margin-left: 300px;
+	width: 50px;
+	height: 50px;
+    
+   }
+   .fou_icon{
+	margin-left: 350px;
+   }
+   .thu_icon{
+	 margin-left: 150px;  
+   }
+   .fiv_icon{
+	  margin-left:30px ; 
+   }
+   .six_icon{
+	   margin-left: 300px;
+	   margin-top: 2px;
+   }
+   .mpdi_pp{
+	color: lemonchiffon;
+   }
+   .paragraph{
+	   text-align: center;
+	   width: 500px;
+	  
+	   color: black;
+   }
+   .imgg{
+	   width: 100%;
+	   border-radius: 50px;
+   
+   }
+   .f_img{
+	  border-radius: 200px; 
+	  margin-top: 70px;
+	  width: 400px;
+	  height: 300px;
+   }
