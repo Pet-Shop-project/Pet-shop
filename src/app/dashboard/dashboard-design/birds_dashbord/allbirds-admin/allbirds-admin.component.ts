@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BirdsService } from 'src/app/services/birds.service';
-import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-allbirds-admin',
@@ -9,17 +9,12 @@ import { Router } from '@angular/router';
 })
 export class AllbirdsAdminComponent implements OnInit {
 
- public birdcode: any;
-  birds: any;
 
 
-  constructor(private bird:BirdsService,private route:Router) { }
+  constructor() { }
 
   ngOnInit() {
-    this.bird.listheavy().subscribe(data=>{
-      this.birds=data;
-      console.log(data)
-    })
+   
   }
 
 }

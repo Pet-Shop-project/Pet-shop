@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row" style="margin-bottom: 100px;">
-    <div class="col-md-4 mt-4" *ngFor="let accessory of accessories"  (click)=" showdetails(bird)">
+    <div class="col-md-4 mt-4" *ngFor="let bird of birds"  (click)=" showdetails(bird)">
       <div class="card profile-card-5" >
           <div class="card-img-block">
-              <img class="card-img-top" src="{{accessory.image}}" alt="Card image cap">
+              <img class="card-img-top" src="{{bird.img}}" alt="Card image cap">
           </div>
               <div class="card-body pt-0">
               <h4 class="card-title">{{bird.name}}</h4>

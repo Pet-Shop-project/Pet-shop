@@ -8,6 +8,7 @@ var lightdogs = require("./controller/lightdogs");
 var normaldogs = require("./controller/normaldogs");
 var heavydogs = require("./controller/heavydogs");
 var alldogs = require("./controller/alldogs");
+var allcats=require("./controller/allcats")
 var accessories = require("./controller/accessories");
 var smallpet_heavy=require('./controller/smallpet_heavy');
 var smallpet_light=require('./controller/smallpet_light');
@@ -25,6 +26,8 @@ app.use("/PET-SHOP/lightdogs", lightdogs)
 app.use("/PET-SHOP/normaldogs", normaldogs)
 app.use("/PET-SHOP/heavydogs", heavydogs)
 app.use("/PET-SHOP/alldogs", alldogs)
+app.use("/PET-SHOP/allcats", allcats)
+
 app.use("/PET-SHOP/accessories",accessories)
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
 app.use("/PET-SHOP/light_cats", light_cats);

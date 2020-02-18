@@ -20,9 +20,9 @@ export class HeavybirdsAdminComponent implements OnInit {
     })
   }
   showdetails(bird){
-    this.route.navigate(["/heavybirds_admin",bird._id])
+    this.route.navigate(["/heavy-details",bird._id])
     }
 }
-  
+
 
 

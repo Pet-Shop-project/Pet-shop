@@ -12,16 +12,17 @@ export class LightbirdsAdminComponent implements OnInit {
 
   constructor(private bird:BirdsService,private route:Router) { }
 
-  
   ngOnInit() {
-    this.bird.listheavy().subscribe(data=>{
+    this.bird.listlightd().subscribe(data=>{
       this.birds=data;
-      // console.log(data)
+      console.log(data)
     })
   }
   showdetails(bird){
-    this.route.navigate(["/lightbirds_admin",bird._id])
+    this.route.navigate(["/light-details",bird._id])
     }
 }
   
+
+
 

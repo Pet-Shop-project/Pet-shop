@@ -12,15 +12,16 @@ export class NormalbirdsAdminComponent implements OnInit {
 
   constructor(private bird:BirdsService,private route:Router) { }
 
-  
   ngOnInit() {
-    this.bird.listheavy().subscribe(data=>{
+    this.bird.listnormalbird().subscribe(data=>{
       this.birds=data;
-      // console.log(data)
+      console.log(data)
     })
+  
   }
   showdetails(bird){
-    this.route.navigate(["/normalbirds_admin",bird._id])
+    this.route.navigate(["/normal-details",bird._id])
     }
 }
   
+
