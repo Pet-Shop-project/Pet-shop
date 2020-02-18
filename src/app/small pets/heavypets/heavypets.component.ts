@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeavypetsComponent implements OnInit {
   public smallpet=[]
+  p:number=1
   constructor(private getheavypet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {

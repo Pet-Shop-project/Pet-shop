@@ -7,7 +7,7 @@ var cats = new Schema({
     weight:Number,
     colors:String,
     price:Number,
-    coat:String,
+    temperament:String,
     images:[String]
 },
 {collection:"heavy-cats"}

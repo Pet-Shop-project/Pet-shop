@@ -1,8 +1,8 @@
 <div class="container contstyle">
   <div class="row ">
-    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem " *ngFor="let heavy of smallpet" (click)="showdetails(heavy)" >
+    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem " *ngFor="let heavy of smallpet |paginate:{itemsPerPage:3,currentPage:p}" (click)="showdetails(heavy)" >
       <div class="img-container m-0 p-0 shadow-sm ">
-        <img src="{{heavy.image[0]}}" class="img-center img-fluid img-showcase" style="width: 350px;height: 250px;">
+        <img src="{{heavy.images[0]}}" class="img-center img-fluid img-showcase" style="width: 350px;height: 250px;">
         <div class="overlay d-flex flex-column align-items-center justify-content-center">
           <h2>{{heavy.name}}</h2>
           <p class="d-block small ">{{heavy.price}} EGP</p>
@@ -11,4 +11,9 @@
     </div>
   </div>
 </div>
+<pagination-controls (pageChange)='p=$event' style="font-size: 40px;text-align: center;color: darkslateblue;background-color: darkturquoise;width: 50px;height: 50px;"></pagination-controls>
+
+  
+
+  
 
