@@ -53,8 +53,19 @@ import { DashboardDesignComponent } from './dashboard/dashboard-design/dashboard
 import { HeavyDogAdminComponent } from './dog-admin/heavy-dog-admin/heavy-dog-admin.component';
 import { LightDogAdminComponent } from './dog-admin/light-dog-admin/light-dog-admin.component';
 import { NormalDogAdminComponent } from './dog-admin/normal-dog-admin/normal-dog-admin.component';
+import { AddformAdminComponent } from './dog-admin/addform-admin/addform-admin.component';
+import { CatAdminAddformComponent } from './cat_admin/cat-admin-addform/cat-admin-addform.component';
+import { AccessoriesAdminComponent } from './Admin accessories/accessories-admin/accessories-admin.component';
+import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
+import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
+import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
 import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination';
+// import { from } from 'rxjs';
+// import { MaterialModule } from './material/material.module';
+
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -109,6 +120,12 @@ import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard
     HeavyDogAdminComponent,
     LightDogAdminComponent,
     NormalDogAdminComponent,
+    AddformAdminComponent,
+    CatAdminAddformComponent,
+    AccessoriesAdminComponent,
+    AccessoriesAdminAddformComponent,
+    SmallpetAdminAddformComponent,
+    BirdsAdminAddformComponent,
     AllCatDetailsComponent,
     DashboardNavbarComponent
   ],
@@ -116,7 +133,11 @@ import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
+    // MaterialModule
+    
   
   ],
   providers: [

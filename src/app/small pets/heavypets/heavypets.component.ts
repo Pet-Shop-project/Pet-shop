@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./heavypets.component.css']
 })
 export class HeavypetsComponent implements OnInit {
-  public heavysmallpet=[]
+  public smallpet=[]
+  p:number=1
   constructor(private getheavypet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {
     this.getheavypet.getheavypet().subscribe(data =>
-      this.heavysmallpet=data
+      this.smallpet=data
      
     );
     // console.log(this.lightsmallpet)

@@ -6,7 +6,7 @@ export class Cats {
        public   weight:Number,
        public   colors:String,
        public   price:Number,
-       public   coat:String,
+       public   temperament:String,
        public    images:[String]
 
 

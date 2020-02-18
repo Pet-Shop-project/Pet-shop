@@ -8,8 +8,7 @@ import {NavbarService} from '../../services/navbar.service'
 })
 export class DashboardDesignComponent implements OnInit {
 
-  constructor(public nav: NavbarService
-    ) { }
+  constructor(public nav: NavbarService ) { }
 
   ngOnInit() {
   this.nav.hide()
