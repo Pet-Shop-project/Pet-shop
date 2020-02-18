@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
 })
 export class NormalpetsComponent implements OnInit {
 
-  public normalsmallpet=[]
+  public smallpet=[]
   constructor(private getnormalpet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {
     this.getnormalpet.getnormalpet().subscribe(data =>
-      this.normalsmallpet=data
+      this.smallpet=data
      
     );
-    console.log(this.normalsmallpet)
+    console.log(this.smallpet)
   }
   showdetails(normal){
     this.router.navigate(["/normaldetail",normal._id])

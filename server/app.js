@@ -15,6 +15,14 @@ var accessories = require("./controller/accessories");
 var smallpet_heavy=require('./controller/smallpet_heavy')
 var smallpet_light=require('./controller/smallpet_light')
 var smallpet_normal=require('./controller/smallpet_normal')
+var smallpet_all=require('./controller/smallpet_all')
+
+
+app.use(cors());
+app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
+app.use('/PET-SHOP/light_pet',smallpet_light)
+app.use('/PET-SHOP/normal_pet',smallpet_normal)
+app.use('/PET-SHOP/all_pet',smallpet_all)
 let heavy_cats=require("./controller/heavy-cats")
 let light_cats=require("./controller/light-cats")
 let normal_cats=require('./controller/normal-cats')
@@ -43,6 +51,7 @@ app.use('/PET-SHOP/normal_pet',smallpet_normal);
 app.use("/PET-SHOP/user", user);
 
 
+
 app.use(express.static("public"));
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -53,9 +62,7 @@ app.all('*', function (req, res, next) {
 app.all("*", (req, resp, next) => {
   resp.status(404).send("cant find this url");
 });
-app.all("*", (req, resp, next) => {
-  resp.status(404).send("cant find this url");
-});
+
 
 app.set("viewengine", "ejs");
 app.set("views", "./views");

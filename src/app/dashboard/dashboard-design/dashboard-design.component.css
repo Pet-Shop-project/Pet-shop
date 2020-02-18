@@ -244,7 +244,11 @@
    width:600px;
    height: 500px;
 }
-
+.conn{
+   width:500px;
+   height:500px;
+ 
+}
 
 
 
@@ -807,6 +811,7 @@
    
  }
  .menu{
-margin-top: -50px;
+    
+     margin-top: -50px;
 
  }
