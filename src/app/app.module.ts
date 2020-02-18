@@ -62,7 +62,7 @@ import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-ad
 import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
 import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgxPaginationModule} from 'ngx-pagination';
+// import {NgxPaginationModule} from 'ngx-pagination';
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
 
@@ -135,7 +135,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+   
     // MaterialModule
     
   
