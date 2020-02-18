@@ -1,14 +1,16 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 const allSmallpets = new schema({
-       image:[String],
+       
        name:String,
        size:String,
        life_span:Number,
        weight:Number,
-       colors:String,
+       color:String,
        price:Number,
-       temperament:String},
+       temperament:String,
+       images:[String],
+},
        {collection:"allSmallpets"}
 )
 module.exports=mongoose.model('allSmallpets',allSmallpets);

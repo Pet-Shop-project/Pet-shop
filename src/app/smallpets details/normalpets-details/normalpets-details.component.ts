@@ -11,7 +11,7 @@ import { SmallpetServiceService } from 'src/app/services/smallpet-service.servic
 export class NormalpetsDetailsComponent implements OnInit {
 
   public normalid;
-  public pet=new Smallpets([""],"","",0,"","",0,"");
+  public pet=new Smallpets("","",0,"","",0,"",[""]);
     constructor(private getnormalpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router) { }
   
     ngOnInit() {
