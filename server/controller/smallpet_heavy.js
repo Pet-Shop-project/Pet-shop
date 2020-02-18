@@ -9,7 +9,7 @@ router.get('/heavy',(req,res)=>{
         if(error){
                     console.log(error)
                 }
-                console.log(result)
+                // console.log(result)
                
                 res.json(result)
             })  })

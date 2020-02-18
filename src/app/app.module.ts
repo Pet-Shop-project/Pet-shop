@@ -48,6 +48,7 @@ import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-ca
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 import { SmallpetServiceService } from './services/smallpet-service.service';
+import { AuthenticationService } from './services/authentication.service';
 import { HeavyCatAdminComponent } from './cat_admin/heavy-cat-admin/heavy-cat-admin.component';
 import { LightCatAdminComponent } from './cat_admin/light-cat-admin/light-cat-admin.component';
 import { NormalCatAdminComponent } from './cat_admin/normal-cat-admin/normal-cat-admin.component';
@@ -136,10 +137,10 @@ import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normal
   
   ],
  
-  providers:[
-     SmallpetServiceService,
-    //  Birdsservice,
-            ],
+  providers: [
+    // SmallpetServiceService
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
