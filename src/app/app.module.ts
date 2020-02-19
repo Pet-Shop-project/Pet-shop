@@ -153,10 +153,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HttpClientModule,
     BrowserAnimationsModule,
     NgxPaginationModule
-<<<<<<< HEAD
-=======
    
->>>>>>> bd8cd1e8c8f4c1b75a8ace3cc3a7154501e406f2
     // MaterialModule
     
   
