@@ -3,12 +3,12 @@
     <div class="col-md-4 mt-4" *ngFor="let accessory of accessories">
       <div class="card profile-card-5" >
           <div class="card-img-block">
-              <img class="card-img-top" src="{{accessory.image}}" alt="Card image cap">
+              <img class="card-img-top" src="{{accessory.images[0]}}" alt="Card image cap">
           </div>
               <div class="card-body pt-0">
               <h4 class="card-title">{{accessory.name}}</h4>
               <h5 class="card-text">Price: {{accessory.price}} $</h5>
-              <h5 class="card-text">Length: {{accessory.length}} cm</h5>
+              <h5 class="card-text">Length: {{accessory.weight}} cm</h5>
               <h5 class="card-text">Color: {{accessory.color}}</h5>
               <a href="#" class="action-button shadow animate blue">cart</a>
               <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">wishlist</a>
