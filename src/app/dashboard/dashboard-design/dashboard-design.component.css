@@ -1,15 +1,3 @@
-*{
-   font-family: MV Boli;
-}
-.right_div{
-   width: 500px;
-   height: 200px;
-   background-color: burlywood;
-   border-radius: 25px;
-}
-.left_div{
-   width: 500px;
-   height: 200px;
-   background-color: burlywood;
-   border-radius: 25px;
+.bb{
+   color: chocolate;
 }
