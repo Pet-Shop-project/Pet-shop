@@ -52,6 +52,13 @@ import { AccessoriesAdminAddformComponent } from './Admin accessories/accessorie
 import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
 import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 import {AllCatDetailsComponent} from './Cats/all-cat-details/all-cat-details.component'
+import { AllbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/allbirds-admin/allbirds-admin.component';
+import { HeavybirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/heavybirds-admin/heavybirds-admin.component';
+import { LightbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/lightbirds-admin/lightbirds-admin.component';
+import { NormalbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/normalbirds-admin/normalbirds-admin.component';
+import { HeavysmallAdminComponent } from './dashboard/smallpets_dashbord/heavysmall-admin/heavysmall-admin.component';
+import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsmall-admin/lightsmall-admin.component';
+import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
 
 const routes: Routes = [
   
@@ -93,10 +100,10 @@ const routes: Routes = [
 {path:'heavy-birds',component:HeavyBirdsComponent},
 {path:'light-birds',component:LightBirdsComponent},
 {path:'normal-birds',component:NormalBirdsComponent},
-{path:'normal-details',component:NormalDetailsComponent},
-{path:'light-details',component:LightlDetailsComponent},
-{path:'all-details',component:AllDetailsComponent},
-{path:'heavy-details',component:HeavyDetailsComponent},
+{path:'normal-details/:_id',component:NormalDetailsComponent},
+{path:'light-details/:_id',component:LightlDetailsComponent},
+{path:'all-details/:_id',component:AllDetailsComponent},
+{path:'heavy-details/:_id',component:HeavyDetailsComponent},
 {path:'heavy-cats-details/:_id',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details/:_id',component:LightCatsDetailsComponent},
 {path:'normal-cats-details/:_id',component:NormalCatsDetailsComponent},
@@ -112,6 +119,13 @@ const routes: Routes = [
 {path:'light-dog-admin',component:LightDogAdminComponent},
 {path:'normal-dog-admin',component:NormalDogAdminComponent},
 {path:'dashboard',component:DashboardDesignComponent},
+{path:'allbirds_admin',component:AllbirdsAdminComponent},
+{path:'heavybirds_admin',component:HeavybirdsAdminComponent},
+{path:'lightbirds_admin',component:LightbirdsAdminComponent},
+{path:'normalbirds_admin',component:NormalbirdsAdminComponent},
+{path:'heavysmall_admin',component:HeavysmallAdminComponent},
+{path:'lightsmall_admin',component:LightsmallAdminComponent},
+{path:'normalsmall_admin',component:NormalsmallAdminComponent},
 
 {path:'accessories_admin',component:AccessoriesAdminComponent},
 {path:'dog_addform',component:AddformAdminComponent},

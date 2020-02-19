@@ -44,8 +44,11 @@ import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { HeavyCatsDetailsComponent } from './Cats/heavy-cats-details/heavy-cats-details.component';
 import { LightCatsDetailsComponent } from './Cats/light-cats-details/light-cats-details.component';
 import { NormalCatsDetailsComponent } from './Cats/normal-cats-details/normal-cats-details.component';
+// import {BirdsService} from './services/birds.service';
 import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs';
 import { SmallpetServiceService } from './services/smallpet-service.service';
+import { AuthenticationService } from './services/authentication.service';
 import { HeavyCatAdminComponent } from './cat_admin/heavy-cat-admin/heavy-cat-admin.component';
 import { LightCatAdminComponent } from './cat_admin/light-cat-admin/light-cat-admin.component';
 import { NormalCatAdminComponent } from './cat_admin/normal-cat-admin/normal-cat-admin.component';
@@ -61,6 +64,13 @@ import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet
 import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
 import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
+import { AllbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/allbirds-admin/allbirds-admin.component';
+import { HeavybirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/heavybirds-admin/heavybirds-admin.component';
+import { LightbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/lightbirds-admin/lightbirds-admin.component';
+import { NormalbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/normalbirds-admin/normalbirds-admin.component';
+import { HeavysmallAdminComponent } from './dashboard/smallpets_dashbord/heavysmall-admin/heavysmall-admin.component';
+import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsmall-admin/lightsmall-admin.component';
+import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxPaginationModule} from 'ngx-pagination';
 // import { from } from 'rxjs';
@@ -127,7 +137,14 @@ import {NgxPaginationModule} from 'ngx-pagination';
     SmallpetAdminAddformComponent,
     BirdsAdminAddformComponent,
     AllCatDetailsComponent,
-    DashboardNavbarComponent
+    DashboardNavbarComponent,
+    AllbirdsAdminComponent,
+    HeavybirdsAdminComponent,
+    LightbirdsAdminComponent,
+    NormalbirdsAdminComponent,
+    HeavysmallAdminComponent,
+    LightsmallAdminComponent,
+    NormalsmallAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -140,9 +157,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     
   
   ],
+ 
   providers: [
     // SmallpetServiceService
-   
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

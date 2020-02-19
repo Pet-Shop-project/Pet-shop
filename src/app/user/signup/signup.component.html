@@ -1,45 +1,37 @@
-<div class="wrapper" style="background-image: url(https://slidesgo.com/storage/43151/46QvIDHG1qe9HTAE17zBYhu_BTDmZ5kzj_x1koZN1Lj8M2tzBhK23MkLgv4Tm6Z2pIW0HZZuq7SvZvtUKxwwyEazJ2Mu_MJVWe1bHtO1ZX2jcQSjiqUjmh6vTf7PWq19kVW2sHlN9ET3MxCYF2kqt3AfyxHVYy6kxgU8a6s5ZDw0tVzYb556gAHNximEkmL-77xomQ%3Ds1600.png);">
-    <div class="inner">
-        <form #signUp="ngForm" (ngSubmit)="onSubmit()" novalidate>
-            <h3>Registration Form</h3>
-            	<div class="form-group">
-				 <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
-          			<label for="">First Name</label>
-							 <input type="text" class="form-control" name="firstname" [(ngModel)]="userModel.firstname" required placeholder="first name" [class.is-invalid]="firstname.invalid && firstname.touched" #firstname="ngModel" />
-                   <small class="text-danger" [class.d-none]="firstname.valid || firstname.untouched">Enter first name</small>
-						</div>
-						<div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
-							<label for="">Last Name</label>
-				 <input type="text" class="form-control" name="secondname" [(ngModel)]="userModel.secondname" required placeholder="Second Name" [class.is-invalid]="lastName.invalid && lastName.touched" #lastName="ngModel" />
-                   <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Enter Second name</small>
-		    	</div>
-			</div>
-            <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
-                <label for="">Email</label>
-                <input type="email" class="form-control" name="email" [(ngModel)]="userModel.email" required placeholder="email" [class.is-invalid]="email.invalid && email.touched" #email="ngModel" />
-          <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is Required</small>
-            </div>
-            <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
-                <label for="">Password</label>
-                <input type="password" class="form-control" name="password" [(ngModel)]="userModel.password" required placeholder="password"
-        [class.is-invalid]="password.invalid && password.touched" #password="ngModel">
+<div class="wrapper"
+  style="background-image: url(https://slidesgo.com/storage/43151/46QvIDHG1qe9HTAE17zBYhu_BTDmZ5kzj_x1koZN1Lj8M2tzBhK23MkLgv4Tm6Z2pIW0HZZuq7SvZvtUKxwwyEazJ2Mu_MJVWe1bHtO1ZX2jcQSjiqUjmh6vTf7PWq19kVW2sHlN9ET3MxCYF2kqt3AfyxHVYy6kxgU8a6s5ZDw0tVzYb556gAHNximEkmL-77xomQ%3Ds1600.png);">
+  <div class="inner">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <h3>Registration Form</h3>
+      <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="Register.name" required
+          placeholder="Enetr Your Name" [class.is-invalid]="name.invalid && name.touched" #name="ngModel" />
+        <small class="text-danger" [class.d-none]="name.valid || name.untouched">Enter Your Name</small>
+      </div>
+      <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <label for="">Email</label>
+        <input type="email" class="form-control" name="email" id="email" [(ngModel)]="Register.email" required
+          placeholder="Enter Your Email" [class.is-invalid]="email.invalid && email.touched" #email="ngModel" />
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is Required</small>
+      </div>
+      <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <label for="">Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="Register.password" required
+          placeholder="Enter Password" [class.is-invalid]="password.invalid && password.touched" #password="ngModel">
         <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required</small>
-            </div>
-            <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
-                <label for="">Confirm Password</label>
-                <input type="password" class="form-control" name="password" [(ngModel)]="userModel.password" required placeholder="password"
-        [class.is-invalid]="password.invalid && password.touched" #password="ngModel">
-        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required</small>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> I accept the Terms of Use & Privacy Policy.
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-            <button  type="submit" [disabled]="signUp.form.invalid">Register Now</button>
-            <button class="btn" routerLink="/user/Login">Back LogIn</button>
+      </div>
+      <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <label for="">Confirm Password</label>
+        <input type="password" class="form-control" name="password2" id="password2" [(ngModel)]="Register.password2"
+          required placeholder="Repeat Password Again" [class.is-invalid]="password2.invalid && password2.touched"
+          #password2="ngModel">
+        <small class="text-danger" [class.d-none]="password2.valid || password2.untouched">Password is Required</small>
+      </div>
+      <button type="submit" [disabled]="form.form.invalid">Register Now</button>
+      <button class="btn" routerLink="/user/Login">Back LogIn</button>
 
-        </form>
-    </div>
+    </form>
+  </div>
+  <div *ngIf="!Result1" class="btn btn-danger">{{Div}} </div>
 </div>
