@@ -25,15 +25,15 @@ export class SmallpetServiceService {
     return this.http.get<any>(this.lightdetails_api+light_id )
   }
 
-  getheavypet():Observable<Smallpets[]>{
-    return this.http.get<Smallpets[]>(this.heavy_api)
+  getheavypet():Observable<any>{
+    return this.http.get<any>(this.heavy_api)
 
   }
   getheavydetails(heavy_id):Observable<any>{
     return this.http.get<any>(this.heavydetails_api+heavy_id )
   }
-  getnormalpet():Observable<Smallpets[]>{
-    return this.http.get<Smallpets[]>(this.normal_api)
+  getnormalpet():Observable<any>{
+    return this.http.get<any>(this.normal_api)
 
   }
   getnormaldetails(normal_id):Observable<any>{

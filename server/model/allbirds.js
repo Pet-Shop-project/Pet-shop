@@ -8,7 +8,7 @@ var allbirds = new Schema({
     color:String,
     price:Number,
     temperament:String,
-    img:[String]},
+    images:[String]},
     {collection:"allbirds"}
 
 );

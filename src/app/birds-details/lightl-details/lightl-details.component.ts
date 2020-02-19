@@ -15,7 +15,7 @@ export class LightlDetailsComponent implements OnInit {
 
 
   public lightid;
-public birds=new Birds("", 0,0,0,"",0,"",[""]);
+public birds=new Birds("", "",0,0,"",0,"",[""]);
   constructor(private getlightbirds:BirdsService,private detailroute:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {

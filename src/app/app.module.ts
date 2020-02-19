@@ -72,7 +72,7 @@ import { HeavysmallAdminComponent } from './dashboard/smallpets_dashbord/heavysm
 import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsmall-admin/lightsmall-admin.component';
 import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import {NgxPaginationModule} from 'ngx-pagination';
+ import {NgxPaginationModule} from 'ngx-pagination';
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
 
@@ -152,7 +152,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // NgxPaginationModule
+     NgxPaginationModule
    
     // MaterialModule
     

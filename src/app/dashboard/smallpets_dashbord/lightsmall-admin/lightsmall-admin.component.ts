@@ -8,18 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./lightsmall-admin.component.css']
 })
 export class LightsmallAdminComponent implements OnInit {
-  lightsmallpet: any;
+  
+  pets:[];
 
   constructor(private getLightpet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {
     this.getLightpet.getlightpet().subscribe(data =>
-      this.lightsmallpet=data
+      this.pets=data
      
     );
-    console.log(this.lightsmallpet)
+    console.log(this.pets)
   }
   showdetails(light){
-    this.router.navigate(["/lightdetail",light._id])
+    this.router.navigate(["/lightsmall-admin",light._id])
     }
 }

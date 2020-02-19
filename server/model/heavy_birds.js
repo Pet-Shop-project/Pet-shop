@@ -8,7 +8,7 @@ var heavy_birds = new Schema({
     color:String,
     price:Number,
     temperament:String,
-    img:[String]},
+    images:[String]},
     {collection:"heavy_birds"}
 
 );

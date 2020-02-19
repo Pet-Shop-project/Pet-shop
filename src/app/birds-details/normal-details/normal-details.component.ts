@@ -13,7 +13,7 @@ export class NormalDetailsComponent implements OnInit {
   
 
   public normalid;
-public birds=new Birds("", 0,0,0,"",0,"",[""]);
+public birds=new Birds("", "",0,0,"",0,"",[""]);
   constructor(private getnormaldetails:BirdsService,private detailroute:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {

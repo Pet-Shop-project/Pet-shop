@@ -13,7 +13,7 @@ export class AllDetailsComponent implements OnInit {
 
   
   public allid;
-public birds=new Birds("", 0,0,0,"",0,"",[""]);
+public birds=new Birds("", "",0,0,"",0,"",[""]);
   constructor(private getallbirds:BirdsService,private detailroute:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {

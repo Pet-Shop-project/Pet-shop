@@ -12,7 +12,7 @@ export class HeavyDetailsComponent implements OnInit {
   // [x: string]: any;
 
   public heavyid;
-public birds=new Birds("", 0,0,0,"",0,"",[""]);
+public birds=new Birds("", "",0,0,"",0,"",[""]);
   constructor(private getheavybirds:BirdsService,private detailroute:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {

@@ -1,25 +1,23 @@
 
-
 <app-dashboard-navbar></app-dashboard-navbar>
 
 <div class="container">
-     <div class="row" style="margin-bottom: 100px;">
-       <div class="col-md-4 mt-4" *ngFor="let cat of cats" (click)="showdetails(normal)">
-         <div class="card profile-card-5" >
-             <div class="card-img-block">
-                 <img class="card-img-top" src="{{pet.images[0]}}" alt="Card image cap">
-             </div>
-                 <div class="card-body pt-0">
-                 <h4 class="card-title">{{pet.name}}</h4>
-                 <h5 class="card-text">Price: {{pet.price}} $</h5>
-                 <h5 class="card-text">coat: {{pet.coat}} cm</h5>
-                 <h5 class="card-text">Color: {{pet.color}}</h5>
-                 <a href="#" class="action-button shadow animate blue">Edit</a>
-                 <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">Delete</a>
-                 
-               </div>
-             </div>
-     </div>
-     </div>
-   </div>
+    <div class="row" style="margin-bottom: 100px;">
+      <div class="col-md-4 mt-4"*ngFor="let pet of pets" (click)="onSelect(pet)">
+        <div class="card profile-card-5" >
+            <div class="card-img-block">
+                <img class="card-img-top" src="{{pet.images[0]}}" alt="Card image cap">
+            </div>
+                <div class="card-body pt-0">
+                <h4 class="card-title">{{pet.name}}</h4>
+                <h5 class="card-text">Price: {{pet.price}} $</h5>
+              
+                <a href="#" class="action-button shadow animate blue">edit</a>
+                <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">delete</a>
+                
+              </div>
+            </div>
+    </div>
+    </div>
+  </div>
 

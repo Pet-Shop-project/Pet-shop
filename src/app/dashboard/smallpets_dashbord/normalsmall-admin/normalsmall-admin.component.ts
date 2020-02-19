@@ -8,19 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./normalsmall-admin.component.css']
 })
 export class NormalsmallAdminComponent implements OnInit {
-
+public pets:[];
   public normalsmallpet=[]
   constructor(private getnormalpet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {
     this.getnormalpet.getnormalpet().subscribe(data =>
-      this.normalsmallpet=data
+      this.pets=data
      
     );
     console.log(this.normalsmallpet)
   }
   showdetails(normal){
-    this.router.navigate(["/normaldetail",normal._id])
+    this.router.navigate(["/normalsmall-admin",normal._id])
     }
 
 }

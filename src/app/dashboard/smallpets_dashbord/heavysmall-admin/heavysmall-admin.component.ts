@@ -9,17 +9,18 @@ import { SmallpetServiceService } from 'src/app/services/smallpet-service.servic
 })
 export class HeavysmallAdminComponent implements OnInit {
   
-  public heavysmallpet=[]
+  public pets:[];
   constructor(private getheavypet:SmallpetServiceService,private router:Router) { }
 
   ngOnInit() {
     this.getheavypet.getheavypet().subscribe(data =>
-      this.heavysmallpet=data
+      this.pets=data
+     
      
     );
     // console.log(this.lightsmallpet)
   }
   showdetails(heavy){
-    this.router.navigate(["/heavydetail",heavy._id])
+    this.router.navigate(["/heavysmall-admin",heavy._id])
     }
 }
