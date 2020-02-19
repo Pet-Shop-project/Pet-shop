@@ -1,6 +1,6 @@
 <div class="container contstyle">
   <div class="row ">
-    <!-- <div class="col-sm-12 col-md-4 my-3 workItem show-workItem " *ngFor="let heavy of smallpet |paginate:{itemsPerPage:3,currentPage:p}" (click)="showdetails(heavy)" > -->
+    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem " *ngFor="let heavy of smallpet |paginate:{itemsPerPage:3,currentPage:p}" (click)="showdetails(heavy)" >
     <!-- <div class="col-sm-12 col-md-4 my-3 workItem show-workItem " *ngFor="let heavy of smallpet"  (click)="showdetails(heavy)" > -->
      
       <div class="img-container m-0 p-0 shadow-sm ">
@@ -13,9 +13,4 @@
     </div>
   </div>
 <!-- </div> -->
-<!-- <pagination-controls (pageChange)='p=$event' style="font-size: 40px;text-align: center;color: darkslateblue;background-color: darkturquoise;width: 50px;height: 50px;"></pagination-controls> -->
-
-  
-
-  
-
+<pagination-controls (pageChange)='p=$event' style="font-size: 40px;text-align: center;color: darkslateblue;background-color: darkturquoise;width: 50px;height: 50px;"></pagination-controls>

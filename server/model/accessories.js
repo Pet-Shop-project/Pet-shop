@@ -2,10 +2,13 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var accessories = new Schema({
     name:String,
-    length:Number,
+    size:String,
+    life_span:Number,
+    weight:Number,
     color:String,
     price:Number,
-    images:String},
+    temperament:String,
+    images:[String]},
     {collection:"accessories"}
 );
 mongoose.model("accessories",accessories);
