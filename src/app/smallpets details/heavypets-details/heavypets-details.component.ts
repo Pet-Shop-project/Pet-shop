@@ -11,7 +11,7 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 export class HeavypetsDetailsComponent implements OnInit {
 
   public heavyid;
-public pet=new Smallpets([""],"","",0,"","",0,"");
+public pet=new Smallpets("","",0,"","",0,"",[""]);
   constructor(private getheavypet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router) { }
 
   ngOnInit() {

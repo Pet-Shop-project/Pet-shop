@@ -61,6 +61,11 @@ import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet
 import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
 import { AllCatDetailsComponent } from './Cats/all-cat-details/all-cat-details.component';
 import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination';
+// import { from } from 'rxjs';
+// import { MaterialModule } from './material/material.module';
+
 
 // import { HttpClient } from '@angular/common/http';
 
@@ -128,7 +133,11 @@ import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
+    // MaterialModule
+    
   
   ],
   providers: [
