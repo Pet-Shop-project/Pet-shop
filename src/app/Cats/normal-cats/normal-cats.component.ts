@@ -7,8 +7,40 @@ import {Router} from '@angular/router'
   styleUrls: ['./normal-cats.component.css']
 })
 export class NormalCatsComponent implements OnInit {
+  collection = { count: 15, data: [] };
+  config = {
+    id: 'custom',
+    itemsPerPage: 3,
+    currentPage: 1,
+    totalItems: this.collection.count
+  };
   
-  constructor(private catsServ:HeavtCatsService,private router:Router) { }
+  public maxSize: number = 3;
+  public directionLinks: boolean = true;
+  public autoHide: boolean = false;
+  public responsive: boolean = true;
+  public labels: any = {
+      previousLabel: 'prev',
+      nextLabel: 'next',
+      screenReaderPaginationLabel: 'Pagination',
+      screenReaderPageLabel: 'page',
+      screenReaderCurrentLabel: `You're on page`
+  };
+  constructor(private catsServ:HeavtCatsService,private router:Router) { 
+    for (var i = 0; i < this.collection.count; i++) {
+      this.collection.data.push(
+        {
+          id: i + 1,
+          value: "items number " + (i + 1)
+        }
+      );
+    }
+  }
+  onPageChange(event){
+    console.log(event);
+    this.config.currentPage = event;
+   }
+  
   public cats=[];
   ngOnInit() {
 

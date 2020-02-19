@@ -79,7 +79,7 @@
     background: #064EA5;
     margin: 5px 4px;
     border-radius: 50%;
-    
+    border: 2px inset ivory;
 }
  
 .page-number.current{

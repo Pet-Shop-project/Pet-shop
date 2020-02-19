@@ -7,6 +7,7 @@ import {Cats} from '../cats'
   providedIn: 'root'
 })
 export class HeavtCatsService {
+  [x: string]: any;
 
   constructor(private http:HttpClient) { }
   get_heavy_cats():Observable<any>{

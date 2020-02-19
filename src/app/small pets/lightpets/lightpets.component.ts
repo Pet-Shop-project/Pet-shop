@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./lightpets.component.css']
 })
 export class LightpetsComponent implements OnInit {
+  
 public smallpet=[]
 
 collection = { count: 12, data: [] };
@@ -30,6 +31,7 @@ public labels: any = {
     screenReaderCurrentLabel: `You're on page`
 };
   constructor(private getLightpet:SmallpetServiceService,private router:Router) {
+    
     for (var i = 0; i < this.collection.count; i++) {
       this.collection.data.push(
         {

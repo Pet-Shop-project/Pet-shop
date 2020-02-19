@@ -1,10 +1,12 @@
+import{ Register } from '../app/services/register'
+import { from } from 'rxjs'
 export class LoginUser {
-    constructor(
-
+    email : String
+    password : String
    
-     public   email:String,
-     public   password:String,
-    ){
+}
 
-    }
+export class ErrorMsg {
+    Msg : String
+   
 }

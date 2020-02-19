@@ -1,0 +1,88 @@
+*{
+    font-family: MV Boli;
+  }
+  
+  .profile-card-5{
+       margin-top:20px;
+     }
+     .profile-card-5 .btn{
+       border-radius:5px;
+       text-transform:uppercase;
+       font-size:12px;
+       padding:7px 20px;
+     }
+     .profile-card-5 .card-img-block {
+       width: 91%;
+       margin: 0 auto;
+       position: relative;
+       top: -20px;
+       
+     }
+     .profile-card-5 .card-img-block img{
+       border-radius:5px;
+       box-shadow:0 0 10px rgba(0,0,0,0.63);
+     }
+     .profile-card-5 h5{
+       color:black6;
+       font-weight:600;
+     }
+     .profile-card-5 p{
+       font-size:14px;
+       font-weight:300;
+     }
+     .profile-card-5 .btn-primary{
+       background-color:#4E5E30;
+       border-color:#4E5E30;
+     }
+     .action-button
+     {
+          position: relative;
+          padding: 10px 40px;
+       margin: 0px 10px 10px 0px;
+       float: left;
+          border-radius: 10px;
+          font-family: 'Pacifico', cursive;
+          font-size: 25px;
+          color: #FFF;
+          text-decoration: none;	
+     }
+     
+     .blue
+     {
+          background-color: #006A4E;
+          border-bottom: 3px solid #4E5E30;
+          border-radius: 30px;
+         
+     }
+     
+     .red
+     {
+          background-color: #E74C3C;
+          border-bottom: 5px solid #BD3E31;
+         
+     }
+     
+     .black
+     {
+          background-color: rgb(23, 24, 23);
+          border-bottom: 5px solid #0d0e0d;
+          text-shadow: 0px -2px #252525;
+     }
+     
+     .yellow
+     {
+          background-color:#BD3E31;
+          border-bottom: 5px solid #BD3E31;
+          border-radius: 30px;
+      
+     }
+     
+     .action-button:active
+     {
+          transform: translate(0px,5px);
+       -webkit-transform: translate(0px,5px);
+          border-bottom: 1px solid;
+     }
+  
+  
+  

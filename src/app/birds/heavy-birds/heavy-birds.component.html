@@ -1,36 +1,35 @@
 <div class="container contstyle">
   <div class="row">
-                        <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB">
-                          <div class="img-container m-0 p-0 shadow-sm"routerLink="/details-cats">
-                            <img src="https://petco.scene7.com/is/image/PETCO/bird-hp-102119-img-article-birds-x3-180w-180h-d" class="img-center img-fluid img-showcase" >
+                        <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor= "let bird of birds |paginate:config" (click)=" showdetails(bird)">
+                          <div class="img-container m-0 p-0 shadow-sm">
+                            <img src="{{bird.images[0]}}" style="width: 300px;height: 300px;">
                             <div class="overlay d-flex flex-column align-items-center justify-content-center">
-                              <h2><a class="link-overlay " href="#" title="Contoso Case">Contoso Case</a></h2>
-                              <p class="d-block small ">all</p>
+                              <h2>{{bird.name}}</h2>
+                              <p class="d-block small ">{{bird.price}}</p>
                             </div>
                           </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB">
-                            <div class="img-container m-0 p-0 shadow-sm"routerLink="/details-cats">
-                              <img src="https://petco.scene7.com/is/image/PETCO/bird-hp-102119-img-article-birds-x3-180w-180h-d" class="img-center img-fluid img-showcase" >
-                              <div class="overlay d-flex flex-column align-items-center justify-content-center">
-                                <h2><a class="link-overlay " href="#" title="Contoso Case">Contoso Case</a></h2>
-                                <p class="d-block small ">all</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB">
-                              <div class="img-container m-0 p-0 shadow-sm"routerLink="/details-cats">
-                                <img src="https://petco.scene7.com/is/image/PETCO/bird-hp-102119-img-article-birds-x3-180w-180h-d" class="img-center img-fluid img-showcase" >
-                                <div class="overlay d-flex flex-column align-items-center justify-content-center">
-                                  <h2><a class="link-overlay " href="#" title="Contoso Case">Contoso Case</a></h2>
-                                  <p class="d-block small ">all</p>
-                                </div>
-                              </div>
-                            </div>
+                       
   </div>                
 </div>
 
+<pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
+    
+    
+        <div class="custom-pagination">
+         
+            <div class="page-number" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
+                  <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">{{ page.label }}</span>
+                <div *ngIf="p.getCurrent() === page.value">
+                  <span>{{ page.label }}</span>
+                </div>
+            </div>
+            
+        </div>  
+        
+      </pagination-template>
+  
 
+      
 
