@@ -148,17 +148,14 @@
   
 
 h1{
-	font-size:50;   
+	font-size:60px;   
 	font-family: MV Boli;
 	margin: auto;
 	text-align: center;
 	color:black;
 	margin: 30px;
    }
-   i{
-	   color:darkorange;
-	   font-size: 50px;
-   }
+  
    .mpdi_p{
 	   margin-top: 150px;
 	   color: black;
@@ -190,12 +187,19 @@ h1{
    }
    .mpdi_pp{
 	color: lemonchiffon;
+	margin-top: 100px;
+	font-size: 25px;
    }
    .paragraph{
 	   text-align: center;
 	   width: 500px;
 	  
 	   color: black;
+	   margin-top: 50px;
+   }
+   .sec_p{
+margin-top: 100px;
+
    }
    .imgg{
 	   width: 100%;
@@ -203,7 +207,7 @@ h1{
    
    }
    .f_img{
-	  border-radius: 200px; 
+	  border-radius: 70px; 
 	  margin-top: 70px;
 	  width: 400px;
 	  height: 300px;
