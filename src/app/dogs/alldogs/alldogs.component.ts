@@ -17,10 +17,19 @@ export class AlldogsComponent implements OnInit {
       console.log(data);
 
     })
+    
   }
   onSelect(dog){
     this.router.navigate(['/alldogdetails',dog._id])
     console.log(dog._id)
   }
+  search(name){
+    this.router.navigate(['/all_dog_search',name])
+   console.log(name);
+   
+  }
+  back(){
+    this.router.navigate(['/dogs/alldogs'])
+    }
 
 }

@@ -11,4 +11,4 @@ var accessories = new Schema({
     images:[String]},
     {collection:"accessories"}
 );
-mongoose.model("accessories",accessories);
+module.exports= mongoose.model("accessories",accessories);

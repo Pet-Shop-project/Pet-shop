@@ -31,4 +31,7 @@ export class DogsService {
   alldetails(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/alldogs/details/"+_id)
   }
+  search(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/alldogs/search/"+name)
+  }
 }

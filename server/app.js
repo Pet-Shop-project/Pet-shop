@@ -2,8 +2,11 @@ var express = require("express");
 var mongoose = require("mongoose");
 var fs = require("fs");
 var cors = require('cors');
+var bcrypt = require('bcryptjs');
+var jwt = require('jsonwebtoken');
 var app = express();
 var bodyParser = require('body-parser')
+
 
 
 var lightdogs = require("./controller/lightdogs");
@@ -29,7 +32,7 @@ var smallpet_normal=require('./controller/smallpet_normal')
 // let light_cats=require("./controller/light-cats")
 // let normal_cats=require('./controller/normal-cats')
 var smallpet_all=require('./controller/smallpet_all')
-
+var shopcart = require('./controller/shopcart')
 
 app.use(cors());
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
@@ -40,20 +43,15 @@ let heavy_cats=require("./controller/heavy-cats")
 let light_cats=require("./controller/light-cats")
 let normal_cats=require('./controller/normal-cats')
 var user=require('./controller/user')
-
-
+var User=require('./model/user')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
-
 app.use("/PET-SHOP/lightdogs", lightdogs);
 app.use("/PET-SHOP/normaldogs", normaldogs);
 app.use("/PET-SHOP/heavydogs", heavydogs);
 app.use("/PET-SHOP/alldogs", alldogs);
-
 app.use("/PET-SHOP/allcats", allcats)
-
 app.use("/PET-SHOP/accessories",accessories)
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
 app.use("/PET-SHOP/light_cats", light_cats);
@@ -64,11 +62,19 @@ app.use('/PET-SHOP/normal_pet',smallpet_normal);
 app.use('/PET-SHOP/heavybirds',heavybirds);
 app.use('/PET-SHOP/lightbirds',lightbirds);
 app.use('/PET-SHOP/normalbirds',normalbirds);
-app.use('/PET-SHOP/allbirds',allbirds)
+app.use('/PET-SHOP/allbirds',allbirds);
 app.use("/PET-SHOP/user", user);
+app.use("/PET-SHOP/shopcart",shopcart);
 
 
-
+// app.use((req, res, next) => {
+//   User.findById('5e2f996086b6d81394e68468') 
+//     .then(user => {
+//       req.user = user;
+//       next();
+//     })
+//     .catch(err => console.log(err));
+// });
 app.use(express.static("public"));
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -86,7 +92,6 @@ app.set("views", "./views");
 // mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://petshop:AAAAA@cluster0-mv8zv.mongodb.net/Pet_shop?retryWrites=true&w=majority",{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=> console.log("Up"))
 .then(()=>console.log("Database Connected"));
-
 
 
 

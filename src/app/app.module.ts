@@ -73,6 +73,9 @@ import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsm
 import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import {NgxPaginationModule} from 'ngx-pagination';
+import { CartComponent } from './cart/cart.component';
+import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.component';
+import { AllcatsearchComponent } from './search/allcatsearch/allcatsearch.component';
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
 
@@ -145,6 +148,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeavysmallAdminComponent,
     LightsmallAdminComponent,
     NormalsmallAdminComponent,
+    CartComponent,
+    AlldogsearchComponent,
+    AllcatsearchComponent,
   ],
   imports: [
     BrowserModule,

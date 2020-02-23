@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { DogsService } from 'src/app/services/dogs.service';
 import { Dogs } from '../../services/dogs'
 import { HttpBackend } from '@angular/common/http';
+import { CartService } from 'src/app/services/cart.service';
 
 
 @Component({
@@ -12,9 +13,10 @@ import { HttpBackend } from '@angular/common/http';
 })
 export class LightdogdetailsComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute , private dog:DogsService , private router:Router) { }
+  constructor(private route:ActivatedRoute , private dog:DogsService , private router:Router,private cartserv:CartService) { }
   public dogcode;
   public dogs = new Dogs("","",0,0,"",0,"",[""]);
+  public proId;
   ngOnInit() {
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.dogcode=params.get('_id');
@@ -27,5 +29,11 @@ export class LightdogdetailsComponent implements OnInit {
   back(){
   this.router.navigate(['/dogs/lightdogs'])
   }
+  goToCart(product){
+    this.router.navigate(['/cart',product._id]);
+    this.proId=product._id; 
+    this.cartserv.postCart(this.proId).subscribe();
+  }
+  
 }
 

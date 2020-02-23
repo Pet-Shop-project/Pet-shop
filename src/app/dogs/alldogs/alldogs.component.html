@@ -1,3 +1,7 @@
+<form class="form-group" style="margin-top: 30px;">
+  <input class="form-control" style="width: 300px;" type="search" placeholder="Search...." aria-label="Search"  #searchInput >
+  <button class="btn btn-outline-primary" style="margin-left: 310px;margin-top: -70px;" type="submit" (click)="search(searchInput.value)">Search</button> 
+</form>
 <div class="row">
   <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let dog of dogs" (click)="onSelect(dog)"  style="border-radius: 25px; width: 425px;height: 300px;">
     <div class="img-container m-0 p-0 shadow-sm">

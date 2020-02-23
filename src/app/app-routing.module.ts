@@ -59,6 +59,8 @@ import { NormalbirdsAdminComponent } from './dashboard/dashboard-design/birds_da
 import { HeavysmallAdminComponent } from './dashboard/smallpets_dashbord/heavysmall-admin/heavysmall-admin.component';
 import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsmall-admin/lightsmall-admin.component';
 import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
+import { CartComponent } from './cart/cart.component';
+import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.component';
 
 const routes: Routes = [
   
@@ -132,7 +134,9 @@ const routes: Routes = [
 {path:'cat_addform',component:CatAdminAddformComponent},
 {path:'accessories_addform',component:AccessoriesAdminAddformComponent},
 {path:'smallpet_addform',component:SmallpetAdminAddformComponent},
-{path:'birds_addform',component:BirdsAdminAddformComponent}
+{path:'birds_addform',component:BirdsAdminAddformComponent},
+{path:'cart/:_id',component:CartComponent},
+{path:'all_dog_search/:name',component:AlldogsearchComponent}
 
 
 

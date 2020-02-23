@@ -11,4 +11,7 @@ export class AccessoriesService {
   listaccessories():Observable<any>{
     return this.http.get("http://localhost:3000/PET-SHOP/accessories/list/")
   }
+//  updatepet(id):Observable<any>{
+//    return this.http.put<any>("http://localhost:3000/PET-SHOP/accessories/update/"+id)
+//  }
 }

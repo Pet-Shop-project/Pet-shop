@@ -1,0 +1,16 @@
+<ul class="cart__item-list" *ngFor="let item of cart">
+                 
+    <li class="cart__item">
+        <h1>Name:{{item.productId.name}}</h1>
+        <h2>Quantity:{{item.quantity}}</h2> 
+        <button class="btn danger" type="submit" (click)="deleteCartItem(item.productId._id)">Delete</button>
+        
+    </li>
+ 
+</ul>
+<hr>
+<div class="centered">
+<form action="/create-order" method="POST">
+  <!-- <button type="submit" class="btn">CheckOut!</button> -->
+</form>
+</div> 
