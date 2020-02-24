@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./accessories.component.css']
 })
 export class AccessoriesComponent implements OnInit {
-  collection = { count: 57, data: [] };
+  public accessories=[];
+  
+  collection = { count: this.accessories.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -44,7 +46,7 @@ export class AccessoriesComponent implements OnInit {
   
 
    
-  public accessories=[];
+  
   ngOnInit() {
     this.acc.listaccessories().subscribe(data=>{
       this.accessories=data;

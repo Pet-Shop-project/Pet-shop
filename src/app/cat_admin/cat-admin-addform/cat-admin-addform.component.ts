@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeavtCatsService } from "src/app/services/heavt-cats.service";
+import { Cats } from "src/app/cats";
 
 @Component({
   selector: 'app-cat-admin-addform',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cat-admin-addform.component.css']
 })
 export class CatAdminAddformComponent implements OnInit {
-
-  constructor() { }
-
+// public sizes=["largest","small","medium"]
+  constructor(private getnew:HeavtCatsService) { }
+  catModel=new Cats("","",0,0,"",0,"",[""])
   ngOnInit() {
   }
-
+ 
+  onSubmit(){
+   
+      this.getnew.addnewheavycat(this.catModel).subscribe(response =>{
+        console.log('data saved',response)
+     })
+    }
+    
+     
+  
 }

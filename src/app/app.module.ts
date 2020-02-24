@@ -73,6 +73,8 @@ import { NormalbirdsAdminComponent } from './dashboard/dashboard-design/birds_da
 import { HeavysmallAdminComponent } from './dashboard/smallpets_dashbord/heavysmall-admin/heavysmall-admin.component';
 import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsmall-admin/lightsmall-admin.component';
 import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
+import { LightCatAddformComponent } from './cat_admin/light-cat-addform/light-cat-addform.component';
+import { NormalCatAddformComponent } from './cat_admin/normal-cat-addform/normal-cat-addform.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -146,6 +148,8 @@ import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normal
     HeavysmallAdminComponent,
     LightsmallAdminComponent,
     NormalsmallAdminComponent,
+    LightCatAddformComponent,
+    NormalCatAddformComponent,
   ],
   imports: [
     BrowserModule,

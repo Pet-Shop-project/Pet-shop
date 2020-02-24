@@ -33,5 +33,27 @@ router.get('/listcat',function(req,resp){
    })
   
   })
+
+  router.post('/addheavycat',parseUrlencoded,(req,res)=>{
+    const heavycats=mongoose.model('cats');
+    const newheavycats=new heavycats({
+          name: req.body.name,
+          size: req.body.size,
+          life_span: req.body.life_span,
+          weight: req.body.weight,
+          color: req.body.color,
+          price: req.body.price,
+          temperament: req.body.temperament,
+          images: req.body.images
+    })
+    
+    newheavycats.save((err,res)=>{
+      if (err){
+        console.log(err)
+      }
+      console.log(res)
+    })
+  })  
 module.exports = router;
 
+ 

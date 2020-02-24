@@ -55,6 +55,9 @@ export class HeavtCatsService {
   all_details(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/details/"+_id)
   }
+
+addnewheavycat(Cats):Observable<any>{
+  return this.http.post<any>("http://localhost:3000/PET-SHOP/heavy_cats/addheavycat/",Cats)
 }
 
-
+}

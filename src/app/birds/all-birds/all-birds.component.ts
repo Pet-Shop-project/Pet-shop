@@ -10,7 +10,7 @@ import { BirdsService } from 'src/app/services/birds.service';
 export class AllBirdsComponent implements OnInit {
 
 public birds=[];
-collection = { count: 42, data: [] };
+collection = { count: this.birds.length, data: [] };
 config = {
   id: 'custom',
   itemsPerPage: 3,
