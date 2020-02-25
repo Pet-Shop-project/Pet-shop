@@ -1,4 +1,5 @@
-
+<button (click)="on_click()">click</button>
+{{sortCat.price}}
   <div class="row">
     <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of cats |paginate:config" (click)="onSelect(cat)"  style="border-radius: 25px; width: 425px;height: 300px;">
       <div class="img-container m-0 p-0 shadow-sm">
@@ -10,6 +11,7 @@
       </div>
     </div>
   </div>
+
   <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
       
       

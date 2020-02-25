@@ -7,9 +7,7 @@ var bcrypt = require("bcryptjs");
 var parseUrlencoded = bodyParser.urlencoded({
   extended: true
 }); 
-//  const mong=mongoose.model('cats').find(function (err, data) {
-//       resp.json(data);
-//    })
+
 
 router.get('/listcat',function(req,resp){
     mongoose.model('cats').find(function (err, data) {
@@ -54,6 +52,20 @@ router.get('/listcat',function(req,resp){
       console.log(res)
     })
   })  
+   // rndom
+
+   router.get('/random',function(req,resp){
+
+    var cats=[];
+      mongoose.model('cats').find(function(err,data){
+        for (i=0; i<1; i++)
+        {
+          cats[i]=data[i];
+        }
+        resp.send(cats);
+    })
+    
+    })
 module.exports = router;
 
  

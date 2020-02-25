@@ -23,6 +23,19 @@ router.get("/details/:id",(req,res)=>{
         // console.log(data)
         res.json(data)
     }) 
-})            
+})        
+
+router.get('/random',function(req,resp){
+
+    var cats=[];
+      mongoose.model('heavySmallpets').find(function(err,data){
+        for (i=0; i<1; i++)
+        {
+          cats[i]=data[i];
+        }
+        resp.send(cats);
+    })
+    
+    })
 
 module.exports=router

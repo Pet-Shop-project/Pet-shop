@@ -5,7 +5,6 @@ var cors = require('cors');
 var app = express();
 var bodyParser = require('body-parser')
 
-
 var lightdogs = require("./controller/lightdogs");
 var normaldogs = require("./controller/normaldogs");
 var heavydogs = require("./controller/heavydogs");
@@ -29,9 +28,12 @@ var smallpet_normal=require('./controller/smallpet_normal')
 // let light_cats=require("./controller/light-cats")
 // let normal_cats=require('./controller/normal-cats')
 var smallpet_all=require('./controller/smallpet_all')
-
-
+var sort_heavy_cat=require("./controller/sort-heavycat")
+app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
+// var sort_heavy_cat=require("./controller/sort-heavycat")
+// app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
 app.use(cors());
+
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
 app.use('/PET-SHOP/light_pet',smallpet_light)
 app.use('/PET-SHOP/normal_pet',smallpet_normal)
@@ -56,6 +58,7 @@ app.use("/PET-SHOP/allcats", allcats)
 
 app.use("/PET-SHOP/accessories",accessories)
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
+
 app.use("/PET-SHOP/light_cats", light_cats);
 app.use("/PET-SHOP/normal_cats", normal_cats);
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy);

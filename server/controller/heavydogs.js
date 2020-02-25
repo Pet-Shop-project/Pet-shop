@@ -20,4 +20,16 @@ route.get('/list',function(req,resp){
       resp.json(data);
     })
   })
+  route.get('/random',function(req,resp){
+
+    var cats=[];
+      mongoose.model('heavydogs').find(function(err,data){
+        for (i=0; i<1; i++)
+        {
+          cats[i]=data[i];
+        }
+        resp.send(cats);
+    })
+    
+    })
  module.exports = route;
