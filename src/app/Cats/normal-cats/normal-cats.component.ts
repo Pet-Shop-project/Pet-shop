@@ -42,6 +42,9 @@ export class NormalCatsComponent implements OnInit {
    }
   
   public cats=[];
+  public sortCat=[]
+  
+  public start_sort=false
   ngOnInit() {
 
     this.catsServ.get_normal_cats().subscribe(data=>{
@@ -54,5 +57,12 @@ export class NormalCatsComponent implements OnInit {
    console.log(cat._id);
    
   }
+  on_click(){
+    this.catsServ.sort_normalc().subscribe(data=>{
+      this.sortCat=data;
+       this.start_sort=true
+    })
+ 
+}
 
 }

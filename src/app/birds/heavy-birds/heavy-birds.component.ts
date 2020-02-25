@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeavyBirdsComponent implements OnInit {
 public birds=[];
+public sortbirds=[]
+public start_sort=false
 collection = { count: 14, data: [] };
 config = {
   id: 'custom',
@@ -52,5 +54,11 @@ public labels: any = {
   showdetails(bird){
     this.route.navigate(["/heavy-details",bird._id])
     }
-}
+
+    on_click(){
+      this.bird.sort_hevy_birds().subscribe(data=>{
+        this.sortbirds=data;
+         this.start_sort=true
+      })
+}}
 

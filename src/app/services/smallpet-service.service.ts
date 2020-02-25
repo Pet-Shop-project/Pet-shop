@@ -15,6 +15,9 @@ export class SmallpetServiceService {
  public heavydetails_api='http://localhost:3000/PET-SHOP/heavy_pet/details/'
  public normaldetails_api='http://localhost:3000/PET-SHOP/normal_pet/details/'
  public alldetails_api='http://localhost:3000/PET-SHOP/all_pet/details/'
+ public light_api_sort='http://localhost:3000/PET-SHOP/sort/listpets_light'
+ public hvy_api_sort='http://localhost:3000/PET-SHOP/sort/listpets_hvy'
+ public norm_api_sort='http://localhost:3000/PET-SHOP/sort//listpets_norm'
   constructor(private http:HttpClient) { }
 
   getlightpet():Observable<any>{
@@ -47,5 +50,16 @@ export class SmallpetServiceService {
     return this.http.get<any>(this.alldetails_api+all_id )
   }
 
+  sortheavypet():Observable<any>{
+    return this.http.get<any>(this.hvy_api_sort)
 
+  }
+  sortlightpet():Observable<any>{
+    return this.http.get<any>(this.light_api_sort)
+
+  }
+  sortnormpet():Observable<any>{
+    return this.http.get<any>(this.norm_api_sort)
+
+  }
 }

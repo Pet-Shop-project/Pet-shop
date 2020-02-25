@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class LightpetsComponent implements OnInit {
   
 public smallpet=[]
+public sortpet=[]
+public start_sort=false
 
 collection = { count: 12, data: [] };
 config = {
@@ -56,4 +58,9 @@ public labels: any = {
   showdetails(light){
     this.router.navigate(["/lightdetail",light._id])
     }
-}
+    on_click(){
+      this.getLightpet.sortlightpet().subscribe(data=>{
+        this.sortpet=data;
+         this.start_sort=true
+      })
+}}

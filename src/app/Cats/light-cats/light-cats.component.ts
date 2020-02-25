@@ -14,7 +14,8 @@ export class LightCatsComponent implements OnInit {
     currentPage: 1,
     totalItems: this.collection.count
   };
-  
+ 
+  public sortCat=[]
   public maxSize: number = 3;
   public directionLinks: boolean = true;
   public autoHide: boolean = false;
@@ -42,6 +43,7 @@ export class LightCatsComponent implements OnInit {
    }
   
   public cats=[]; 
+  public start_sort=false
   ngOnInit() {
     this.catsServ.get_light_cats().subscribe(data=>{
       this.cats=data;
@@ -53,5 +55,12 @@ export class LightCatsComponent implements OnInit {
    console.log(cat._id);
    
   }
+  on_click(){
+    this.catsServ.sort_lightc().subscribe(data=>{
+      this.sortCat=data;
+       this.start_sort=true
+    })
+ 
+}
 
 }

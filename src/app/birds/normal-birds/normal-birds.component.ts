@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class NormalBirdsComponent implements OnInit {
   
  public birds= [];
+ public sortbirds=[]
+public start_sort=false
  collection = { count: 14, data: [] };
  config = {
    id: 'custom',
@@ -55,6 +57,11 @@ export class NormalBirdsComponent implements OnInit {
   showdetails(bird){
     this.route.navigate(["/normal-details",bird._id])
     }
-}
+    on_click(){
+      this.bird.sort_norm_birds().subscribe(data=>{
+        this.sortbirds=data;
+         this.start_sort=true
+      })
+}}
   
 

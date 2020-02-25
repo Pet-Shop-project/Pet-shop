@@ -43,6 +43,8 @@ export class NormaldogsComponent implements OnInit {
   }
   
   public dogs=[]; 
+  public sortdog=[]
+public start_sort=false
   ngOnInit() {
     this.dog.listnormaldog().subscribe(data=>{
       this.dogs=data;
@@ -54,4 +56,10 @@ export class NormaldogsComponent implements OnInit {
     console.log(dog._id)
   }
 
-}
+  on_click(){
+    this.dog.sort_normd().subscribe(data=>{
+      this.sortdog=data;
+       this.start_sort=true
+    })
+
+}}

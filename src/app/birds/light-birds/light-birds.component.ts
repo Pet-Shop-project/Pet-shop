@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LightBirdsComponent implements OnInit {
  public birds=[];
+ public sortbirds=[]
+public start_sort=false
  collection = { count: 14, data: [] };
  config = {
    id: 'custom',
@@ -53,7 +55,12 @@ export class LightBirdsComponent implements OnInit {
   showdetails(bird){
     this.route.navigate(["/light-details",bird._id])
     }
-}
+    on_click(){
+      this.bird.sort_light_birds().subscribe(data=>{
+        this.sortbirds=data;
+         this.start_sort=true
+      })
+}}
   
 
 

@@ -43,6 +43,9 @@ export class HeavydogsComponent implements OnInit {
   }
   
   public dogs=[];
+  public sortdog=[]
+  
+  public start_sort=false
   ngOnInit() {
     this.dog.listheavydog().subscribe(data=>{
       this.dogs=data;
@@ -50,8 +53,14 @@ export class HeavydogsComponent implements OnInit {
 
     })
   }
+
   onSelect(dog){
     this.router.navigate(['/heavydogdetails',dog._id])
     console.log(dog._id)
   }
-}
+  on_click(){
+    this.dog.sort_hvyd().subscribe(data=>{
+      this.sortdog=data;
+       this.start_sort=true
+    })
+}}

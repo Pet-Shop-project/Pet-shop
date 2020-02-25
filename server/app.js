@@ -43,7 +43,8 @@ let light_cats=require("./controller/light-cats")
 let normal_cats=require('./controller/normal-cats')
 var user=require('./controller/user')
 
-
+var sort=require("./controller/sort")
+app.use("/PET-SHOP/sort",sort);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

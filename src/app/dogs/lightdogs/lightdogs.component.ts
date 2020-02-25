@@ -43,6 +43,8 @@ export class LightdogsComponent implements OnInit {
   }
   
 public dogs=[];
+public sortdog=[]
+public start_sort=false
   ngOnInit() {
     this.dog.listlightd().subscribe(data=>{
     this.dogs=data;
@@ -53,4 +55,10 @@ public dogs=[];
     this.router.navigate(['/lightdogdetails',dog._id])
     console.log(dog._id)
   }
-}
+  on_click(){
+    this.dog.sort_lightd().subscribe(data=>{
+      this.sortdog=data;
+       this.start_sort=true
+    })
+
+}}

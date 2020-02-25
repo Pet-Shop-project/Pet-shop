@@ -43,11 +43,15 @@ export class HeavyCatsComponent implements OnInit {
   
   public cats=[]; 
 public sortCat=[]
+  
+  public start_sort=false
   ngOnInit() {
     this.catsServ.get_heavy_cats().subscribe(data=>{
       this.cats=data;
   })
+  
 }
+
 
 
   onSelect(cat){
@@ -58,9 +62,11 @@ public sortCat=[]
 
 
   on_click(){
-    this.catsServ.sort_heavy_cat().subscribe(data=>{
+    this.catsServ.sort().subscribe(data=>{
       this.sortCat=data;
-  })
+       this.start_sort=true
+    })
+ 
 }
 
 }

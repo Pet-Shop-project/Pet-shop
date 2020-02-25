@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeavypetsComponent implements OnInit {
   public smallpet=[]
+  public sortpet=[]
+public start_sort=false
   
 
   collection = { count: 12, data: [] };
@@ -55,4 +57,9 @@ export class HeavypetsComponent implements OnInit {
   showdetails(heavy){
     this.router.navigate(["/heavydetail",heavy._id])
     }
-}
+    on_click(){
+      this.getheavypet.sortheavypet().subscribe(data=>{
+        this.sortpet=data;
+         this.start_sort=true
+      })
+}}

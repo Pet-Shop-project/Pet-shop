@@ -35,4 +35,13 @@ listheavy():Observable<any>{
   alldetails(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/details/"+_id)
   }
+  sort_light_birds(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_light")
+  }
+  sort_hevy_birds(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_hvy")
+  }
+  sort_norm_birds(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_norm")
+  }
 }

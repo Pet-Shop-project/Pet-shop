@@ -31,4 +31,13 @@ export class DogsService {
   alldetails(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/alldogs/details/"+_id)
   }
+  sort_hvyd(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listdog_heavy")
+  }
+  sort_lightd(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listdog_light")
+  }
+  sort_normd(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listdog_norm")
+  }
 }

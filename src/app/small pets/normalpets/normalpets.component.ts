@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class NormalpetsComponent implements OnInit {
 
   public smallpet=[]
+  public sortpet=[]
+  public start_sort=false
 
   collection = { count: 12, data: [] };
   config = {
@@ -55,5 +57,10 @@ export class NormalpetsComponent implements OnInit {
   showdetails(normal){
     this.router.navigate(["/normaldetail",normal._id])
     }
+    on_click(){
+      this.getnormalpet.sortnormpet().subscribe(data=>{
+        this.sortpet=data;
+         this.start_sort=true
+      })
 
-}
+}}

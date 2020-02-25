@@ -103,8 +103,6 @@ random_lightb():Observable<any>{
   random_normalbird():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/normalbirds/random")
   }
-
-
   random_heavyb():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/heavy_pet/random")
   }
@@ -113,5 +111,17 @@ random_lightb():Observable<any>{
   }
   random_normpet():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/normal_pet/random")
+  }
+
+  sort(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_heavy")
+  }
+  sort_lightc(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_light")
+
+  }
+  sort_normalc(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_normal")
+
   }
 }
