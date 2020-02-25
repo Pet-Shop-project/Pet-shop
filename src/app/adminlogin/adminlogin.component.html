@@ -1,0 +1,23 @@
+<div class="wrapper"
+  style="background-image: url(https://slidesgo.com/storage/43151/46QvIDHG1qe9HTAE17zBYhu_BTDmZ5kzj_x1koZN1Lj8M2tzBhK23MkLgv4Tm6Z2pIW0HZZuq7SvZvtUKxwwyEazJ2Mu_MJVWe1bHtO1ZX2jcQSjiqUjmh6vTf7PWq19kVW2sHlN9ET3MxCYF2kqt3AfyxHVYy6kxgU8a6s5ZDw0tVzYb556gAHNximEkmL-77xomQ%3Ds1600.png);">
+  <div class="inner" style="box-sizing: border-box;">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <h3>Admin Registration Form</h3>
+      <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <label for="">Email</label>
+        <input type="email" class="form-control" name="email" id="email" [(ngModel)]="Login.email" required placeholder="email"
+          [class.is-invalid]="email.invalid && email.touched" #email="ngModel">
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is Required</small>
+      </div>
+      <div class="form-wrapper" style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;">
+        <label for="">Password</label>
+        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="Login.password" required
+          placeholder="password" [class.is-invalid]="password.invalid && password.touched" #password="ngModel">
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required</small>
+      </div>
+      <button type="submit" [disabled]="form.form.invalid">LogIn</button>
+    </form>
+  </div>
+  <div *ngIf="Result" class="btn btn-danger">{{Div}} </div>
+  <div *ngIf="Result2" class="btn btn-success">{{Div2}} </div>
+</div>

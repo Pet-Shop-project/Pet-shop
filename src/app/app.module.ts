@@ -77,6 +77,7 @@ import { CartComponent } from './cart/cart.component';
 import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.component';
 import { AllcatsearchComponent } from './search/allcatsearch/allcatsearch.component';
 import { PaymentComponent } from './payment/payment/payment.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
 
@@ -153,6 +154,7 @@ import { PaymentComponent } from './payment/payment/payment.component';
     AlldogsearchComponent,
     AllcatsearchComponent,
     PaymentComponent,
+    AdminloginComponent,
   ],
   imports: [
     BrowserModule,
