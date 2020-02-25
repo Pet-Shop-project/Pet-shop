@@ -76,6 +76,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartComponent } from './cart/cart.component';
 import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.component';
 import { AllcatsearchComponent } from './search/allcatsearch/allcatsearch.component';
+import { PaymentComponent } from './payment/payment/payment.component';
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
 
@@ -151,6 +152,7 @@ import { AllcatsearchComponent } from './search/allcatsearch/allcatsearch.compon
     CartComponent,
     AlldogsearchComponent,
     AllcatsearchComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

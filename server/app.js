@@ -44,6 +44,7 @@ let light_cats=require("./controller/light-cats")
 let normal_cats=require('./controller/normal-cats')
 var user=require('./controller/user')
 var User=require('./model/user')
+var payment=require('./controller/payment')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -65,7 +66,7 @@ app.use('/PET-SHOP/normalbirds',normalbirds);
 app.use('/PET-SHOP/allbirds',allbirds);
 app.use("/PET-SHOP/user", user);
 app.use("/PET-SHOP/shopcart",shopcart);
-
+app.use("/PET-SHOP/payment",payment)
 
 // app.use((req, res, next) => {
 //   User.findById('5e2f996086b6d81394e68468') 

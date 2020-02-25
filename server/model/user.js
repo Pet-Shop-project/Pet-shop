@@ -15,20 +15,22 @@ var UserSchema = new Schema({
       type: String,
       required: true
     }
-    // cart: {
-    //   items: [{
-    //     productId: {
-    //       type: mongoose.Schema.Types.ObjectId,
-    //       ref: 'allshoppets',
-    //       required: true
-    //     },
-    //     quantity: {
-    //       type: Number,
-    //       required: true
-    //     }
-    //   }]
-    // }
+    // cart:[{
+    //   type: Schema.Types.ObjectId,
+    //   ref:'cart',
+    //   required: true
+    // }]
+  //   cart: {
+  //     items: [{
+  //       productId: {
+  //         type: mongoose.Schema.Types.ObjectId,
+  //         ref: 'allshoppets',
+  //         required: true
+  //       }
+  //     }]
+  //   }
   },
+  
   {
     collection: "UserSchema"
   }

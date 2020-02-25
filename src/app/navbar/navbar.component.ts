@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   userName: String;
   constructor(public nav: NavbarService,private cartserv:CartService,private router:Router,private LogServ : LoginService) {
     if(this.LogServ.auth()){
-      // console.log(this.LogServ.auth())
+      console.log(this.LogServ.auth())
     this.LogServ.GetUser().subscribe(res=>{
         this.userName= res as string
     }  

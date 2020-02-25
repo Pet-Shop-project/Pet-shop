@@ -117,10 +117,7 @@ route.get("/add/:id/:price/:name",verifytoken,function(req,resp,next){
   
 })
 
-
-// //////// show all products in cart
 route.get('/details',verifytoken, function (req, resp) {
-  // show all products in first cart in carts collection
   if(req.query.token != null){
       cartId=Token.useremail
    mongoose.model("cart").findOne({user : cartId}, function (err,data){
@@ -138,7 +135,6 @@ route.get('/details',verifytoken, function (req, resp) {
     
 })
 
-// delete specific product in cart
 route.get('/deleteItem/:id',verifytoken, function (req, resp) {
   cartId=Token.userId
   mongoose.model('cart').update({user:cartId},{ $pull:{ products :{_id:req.params.id} } },()=>console.log("deleted"+req.params.id)

@@ -17,7 +17,7 @@ export class CartComponent implements OnInit {
   public noProducts;
   constructor(private cartserv:CartService,private router:Router,private LogServ : LoginService) {
     if(this.LogServ.auth()){
-      // console.log(this.LogServ.auth())
+      console.log(this.LogServ.auth())
       this.cartserv.cartProductsDetails().subscribe(data=>{
         if(data!=null){
           this.productsInCart=data.products;
