@@ -53,8 +53,6 @@
         <li class="menu-item"><a routerLink='smallpets/normal'>Mediun pets</a></li>
         <li class="menu-item"><a routerLink='smallpets/heavy'>Heavy pets</a></li>
         
-        
-        
       </ol>
     </li>
     <li class="menu-item"><a routerLink="/accessories">Accssesories</a></li>
@@ -63,6 +61,10 @@
       <a class="menu-item" routerLink="/user/Login"><i class="fas fa-user-plus"></i></a>
     </li>
     <li class="menu-item"><a routerLink="dashboard"><i class="fas fa-cogs" style="font-size: 25px;"></i></a></li>
+    <li class="menu-item" *ngIf='cartInfo.totalQuantity>0'>
+      <a class="menu-item ml-n2 deep-purple lighten-1 btn-small btn-floating" style="margin-top: 60px;">{{cartInfo.totalQuantity}}</a>
+    </li>
+    <li class="menu-item"><a routerLink="/cart"><i class="fas fa-cart-plus"></i></a></li>
   </ol>
   
 </nav>

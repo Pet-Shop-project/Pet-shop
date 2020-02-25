@@ -8,12 +8,12 @@ var allshoppets = new Schema({
     color:String,
     price:Number,
     temperament:String,
-    images:[String],
-    userId:[{
-        type : Schema.Types.ObjectId,
-        ref : "UserSchema",
-        required : true
-      }]
+    images:[String]
+    // userId:[{
+    //     type : Schema.Types.ObjectId,
+    //     ref : "UserSchema",
+    //     required : true
+    //   }]
 },
     {collection:"allshoppets"}
 

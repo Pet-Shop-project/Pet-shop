@@ -7,24 +7,11 @@ var app = express();
 var bodyParser = require('body-parser')
 
 router.get('/Username', verifytoken, (req, res, next) => {
-  return res.status(200).json(Token.username)
+  return res.status(200).json(Token.useremail)
 })
 var Token = ''
 
-function verifytoken(req, res, next) {
-  let token = req.query.token;
-  console.log(token)
-  jwt.verify(token, 'Secret', (err, verifytoken) => {
-    if (err)
-      return res.status(400).json({
-        Msg: 'Unauthorized'
-      })
-    if (verifytoken) {
-      Token = verifytoken;
-      next();
-    }
-  })
-}
+
 //Register New Account
 app.use(bodyParser.urlencoded({
   extended: true
@@ -120,10 +107,11 @@ router.post('/login', (req, res, next) => {
     bcrypt.compare(password, user.password, (err, isMatch) => {
       if (isMatch) {
         let token = jwt.sign({
-          username: user.name
+          useremail: user.email
         }, 'Secret', {
           expiresIn: '3h'
         })
+        // console.log(token)
         res.status(200).json(token);
       } else {
         res.status(501).json({
@@ -135,6 +123,28 @@ router.post('/login', (req, res, next) => {
   });
 
 });
+
+
+
+
+
+function verifytoken(req, res, next) {
+  // console.log(req.query)
+  // console.log(req.body);
+  
+  let token = req.query.token;
+  console.log(token)
+  jwt.verify(token, 'Secret', (err, verifytoken) => {
+    if (err)
+      return res.status(400).json({
+        Msg: 'Unauthorized'
+      })
+    if (verifytoken) {
+      Token = verifytoken;      
+      next();
+    }
+  })
+}
 //Delete user from database
 router.delete("/:userId", (req, res, next) => {
   User.remove({
@@ -153,5 +163,12 @@ router.delete("/:userId", (req, res, next) => {
       });
     });
 });
+
+
+
+
+
+
+
 
 module.exports = router;

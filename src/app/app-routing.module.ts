@@ -135,7 +135,7 @@ const routes: Routes = [
 {path:'accessories_addform',component:AccessoriesAdminAddformComponent},
 {path:'smallpet_addform',component:SmallpetAdminAddformComponent},
 {path:'birds_addform',component:BirdsAdminAddformComponent},
-{path:'cart/:_id',component:CartComponent},
+{path:'cart',component:CartComponent},
 {path:'all_dog_search/:name',component:AlldogsearchComponent}
 
 

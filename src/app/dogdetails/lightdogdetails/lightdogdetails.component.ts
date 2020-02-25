@@ -26,14 +26,21 @@ export class LightdogdetailsComponent implements OnInit {
       this.dogs=data;
     })
   }
+  public addToCart(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
+  }
   back(){
   this.router.navigate(['/dogs/lightdogs'])
   }
-  goToCart(product){
-    this.router.navigate(['/cart',product._id]);
-    this.proId=product._id; 
-    this.cartserv.postCart(this.proId).subscribe();
-  }
+  // goToCart(product){
+  //   this.router.navigate(['/cart',product._id]);
+  //   this.proId=product._id; 
+  //   this.cartserv.postCart(this.proId).subscribe();
+  // }
   
 }
 
