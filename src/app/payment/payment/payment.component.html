@@ -1,1 +1,18 @@
-<p>payment works!</p>
+<div class="container-fluid">
+    <div class="row" style="margin-bottom: 150px;">
+    <h2>Stacked form</h2>
+    <form method="POST" #form="ngForm" novalidate (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="card">Your Card Number:</label>
+        <input type="text" class="form-control" class="validate" name="card" id="card"  [(ngModel)]="cardModel.card" 
+        [class.is-invalid]="number.invalid && number.touched"  #number="ngModel" required placeholder="Card Number">
+      </div>
+      <div class="form-group">
+        <label for="card">Enter Verification:</label>
+        <input type="text" class="form-control" class="validate" name="verification"  id="verification" [class.is-invalid]="card.invalid &&card.touched"
+         [(ngModel)]="cardModel.verification" #card="ngModel" required placeholder="Verification Number">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Payment</button>
+    </form>
+  </div>
+  </div>

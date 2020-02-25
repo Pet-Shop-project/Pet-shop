@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Payment } from '../payment'
+import { from } from 'rxjs';
+import { PaymentService } from '../payment.service';
 
 @Component({
   selector: 'app-payment',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-
-  constructor() { }
+    public cardModel=new Payment('','');
+    constructor(private pay:PaymentService) { }
+    
 
   ngOnInit() {
   }
+  onSubmit() {
+    this.pay.payment(this.cardModel).subscribe(
+      data => console.log('Payment done', data),
+      error => console.log('Error',error)
+      )
+  
+    }
 
 }

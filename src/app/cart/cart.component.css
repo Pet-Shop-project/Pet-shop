@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-/* * {
-  box-sizing: border-box;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-} */
-
 main {
   padding: 1rem;
   margin: auto;
@@ -27,8 +17,8 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid #00695c;
-  color: #00695c;
+  border: 1px solid black;
+  color: #0c0c0c;
   background: white;
   border-radius: 3px;
   cursor: pointer;
@@ -36,8 +26,8 @@ form {
 
 .btn:hover,
 .btn:active {
-  background-color: #00695c;
-  color: white;
+  background-color: #bb841f;
+  color: black;
 }
 
 .btn.danger {

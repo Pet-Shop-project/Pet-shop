@@ -61,6 +61,7 @@ import { LightsmallAdminComponent } from './dashboard/smallpets_dashbord/lightsm
 import { NormalsmallAdminComponent } from './dashboard/smallpets_dashbord/normalsmall-admin/normalsmall-admin.component';
 import { CartComponent } from './cart/cart.component';
 import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.component';
+import { PaymentComponent } from './payment/payment/payment.component';
 
 const routes: Routes = [
   
@@ -136,7 +137,8 @@ const routes: Routes = [
 {path:'smallpet_addform',component:SmallpetAdminAddformComponent},
 {path:'birds_addform',component:BirdsAdminAddformComponent},
 {path:'cart',component:CartComponent},
-{path:'all_dog_search/:name',component:AlldogsearchComponent}
+{path:'all_dog_search/:name',component:AlldogsearchComponent},
+{path:'payment',component:PaymentComponent}
 
 
 
