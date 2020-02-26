@@ -34,7 +34,12 @@ var smallpet_normal=require('./controller/smallpet_normal')
 var smallpet_all=require('./controller/smallpet_all')
 var shopcart = require('./controller/shopcart')
 
+var sort_heavy_cat=require("./controller/sort-heavycat")
+app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
+// var sort_heavy_cat=require("./controller/sort-heavycat")
+// app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
 app.use(cors());
+
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
 app.use('/PET-SHOP/light_pet',smallpet_light)
 app.use('/PET-SHOP/normal_pet',smallpet_normal)
@@ -47,6 +52,9 @@ var User=require('./model/user')
 var payment=require('./controller/payment')
 var admin=require('./controller/admin')
 
+var sort=require("./controller/sort")
+app.use("/PET-SHOP/sort",sort);
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use("/PET-SHOP/lightdogs", lightdogs);
@@ -56,6 +64,7 @@ app.use("/PET-SHOP/alldogs", alldogs);
 app.use("/PET-SHOP/allcats", allcats)
 app.use("/PET-SHOP/accessories",accessories)
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
+
 app.use("/PET-SHOP/light_cats", light_cats);
 app.use("/PET-SHOP/normal_cats", normal_cats);
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy);

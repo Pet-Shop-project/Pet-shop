@@ -1,19 +1,27 @@
 <!-- <div class='bold-line'></div> -->
 <div class='container'>
+    
   <div class='window'>
     <div class='overlay'></div>
     <div class='content'>
-      <div class='welcome'>Accessories Form</div>
-      <!-- <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div> -->
+      
+      <div class='welcome'>Accessories <br><br> Form</div>
+      <form action="/accessories/add" method="POST" #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
       <div class='input-fields'>
-        <input type='text' placeholder='name' class='input-line full-width'>
-        <input type='text' placeholder='length' class='input-line full-width'>
-        <input type='text' placeholder='color' class='input-line full-width'>
-        <input type='text' placeholder='price' class='input-line full-width'>
-        <input type='text' placeholder='images' class='input-line full-width'>
+        <input type='text' placeholder='name' name="name" class='input-line full-width' #name="ngModel" [(ngModel)]="accessModel.name">
+        <input type='text' placeholder='size' name="size" class='input-line full-width' #size="ngModel" [(ngModel)]="accessModel.size">
+        <input type='number' placeholder='life_span' name="lifespan" class='input-line full-width' #lifespan="ngModel" [(ngModel)]="accessModel.lifespan">
+        <input type='number' placeholder='weight' name="weight" class='input-line full-width' #weight="ngModel" [(ngModel)]="accessModel.weight">
+        <input type='text' placeholder='color' name="color" class='input-line full-width' #color="ngModel" [(ngModel)]="accessModel.color">
+        <input type='number' placeholder='price' name="price" class='input-line full-width' #price="ngModel" [(ngModel)]="accessModel.price">
+        <input type='text' placeholder='temperament' name="temperament" class='input-line full-width' #temperament="ngModel" [(ngModel)]="accessModel.temperament">
+        <input type='text' placeholder='images' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="accessModel.images">
       </div>
       <!-- <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div> -->
-      <div><button class='ghost-round full-width'>Add</button></div>
+      <button type="submit"  class='ghost-round full-width ' >save</button>
+    </form>
     </div>
   </div>
+
 </div>
+

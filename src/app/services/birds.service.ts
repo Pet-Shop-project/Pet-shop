@@ -45,4 +45,13 @@ listheavy():Observable<any>{
   updateheavypet(id):Observable<any>{
     return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavybirds/update/"+id)
   }
+  sort_light_birds(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_light")
+  }
+  sort_hevy_birds(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_hvy")
+  }
+  sort_norm_birds(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_norm")
+  }
 }

@@ -13,3 +13,4 @@ var cats = new Schema({
 {collection:"heavy-cats"}
 );
 mongoose.model("cats",cats);
+ 

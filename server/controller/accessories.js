@@ -40,4 +40,25 @@ route.get('/list',function(req,resp){
 
     );
 });
+
+  route.post('/add',parseUrlencoded,(req,res)=>{
+    const accessory=mongoose.model('accessories');
+    const newaccessory=new accessory({
+          name: req.body.name,
+          size: req.body.size,
+          life_span: req.body.life_span,
+          weight: req.body.weight,
+          color: req.body.color,
+          price: req.body.price,
+          temperament: req.body.temperament,
+          images: req.body.images
+    })
+    
+    newaccessory.save((err,res)=>{
+      if (err){
+        console.log(err)
+      }
+      console.log(res)
+    })
+  })  
   module.exports = route;

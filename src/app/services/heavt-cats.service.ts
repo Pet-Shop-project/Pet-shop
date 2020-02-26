@@ -65,6 +65,73 @@ export class HeavtCatsService {
   updateheavypet(id):Observable<any>{
     return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavy_cats/update/"+id)
   }
+
+addnewheavycat(Cats):Observable<any>{
+  return this.http.post<any>("http://localhost:3000/PET-SHOP/heavy_cats/addheavycat/",Cats)
 }
 
+sort_heavy_cat():Observable<any>{
 
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort-heavycat");
+
+}
+    
+    
+random_light_cat():Observable<any>{
+    
+  return this.http.get<any>('http://localhost:3000/PET-SHOP/light_cats/random');
+
+}
+
+random_heavy_cat():Observable<any>{
+    
+  return this.http.get<any>('http://localhost:3000/PET-SHOP/heavy_cats/random');
+
+}
+random_normal_cat():Observable<any>{
+    
+  return this.http.get<any>('http://localhost:3000/PET-SHOP/normal_cats/random');
+
+}
+random_lightd():Observable<any>{
+  return this.http.get<any>("http://localhost:3000/PET-SHOP/lightdogs/random")
+  }
+  random_heavydog():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavydogs/random")
+
+}
+
+random_normaldog():Observable<any>{
+  return this.http.get<any>("http://localhost:3000/PET-SHOP/normaldogs/random")
+}
+random_lightb():Observable<any>{
+  return this.http.get<any>("http://localhost:3000/PET-SHOP/lightbirds/random")
+  }
+  random_heavy():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavybirds/random")
+  }
+  random_normalbird():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/normalbirds/random")
+  }
+  random_heavyb():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavy_pet/random")
+  }
+  random_lightpet():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/light_pet/random")
+  }
+  random_normpet():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/normal_pet/random")
+  }
+
+  sort(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_heavy")
+  }
+  sort_lightc(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_light")
+
+  }
+  sort_normalc(){
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_normal")
+
+  }
+}

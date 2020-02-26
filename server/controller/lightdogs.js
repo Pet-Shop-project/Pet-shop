@@ -47,4 +47,16 @@ route.get('/list',function(req,resp){
 
     );
 });
+  route.get('/random',function(req,resp){
+
+    var cats=[];
+      mongoose.model('lightdogs').find(function(err,data){
+        for (i=0; i<1; i++)
+        {
+          cats[i]=data[i];
+        }
+        resp.send(cats);
+    })
+    
+    })
  module.exports = route;

@@ -8,9 +8,45 @@ import { Router } from '@angular/router';
   styleUrls: ['./accessories.component.css']
 })
 export class AccessoriesComponent implements OnInit {
-
-  constructor(private acc:AccessoriesService,private router:Router) { }
   public accessories=[];
+  
+  collection = { count: this.accessories.length, data: [] };
+  config = {
+    id: 'custom',
+    itemsPerPage: 3,
+    currentPage: 1,
+    totalItems: this.collection.count
+  };
+  
+  public maxSize: number = 3;
+  public directionLinks: boolean = true;
+  public autoHide: boolean = false;
+  public responsive: boolean = true;
+  public labels: any = {
+      previousLabel: 'prev',
+      nextLabel: 'next',
+      screenReaderPaginationLabel: 'Pagination',
+      screenReaderPageLabel: 'page',
+      screenReaderCurrentLabel: `You're on page`
+  };
+  constructor(private acc:AccessoriesService,private router:Router) {
+    for (var i = 0; i < this.collection.count; i++) {
+      this.collection.data.push(
+        {
+          id: i + 1,
+          value: "items number " + (i + 1)
+        }
+      );
+    }
+  }
+  onPageChange(event){
+    console.log(event);
+    this.config.currentPage = event;
+   }
+  
+
+   
+  
   ngOnInit() {
     this.acc.listaccessories().subscribe(data=>{
       this.accessories=data;
