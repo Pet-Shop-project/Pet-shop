@@ -20,4 +20,31 @@ route.get('/list',function(req,resp){
       resp.json(data);
     })
   })
+  route.put('/update/:id', function(req, res){
+    console.log('Update a normaldogs');
+    mongoose.model("normaldogs").findByIdAndUpdate(req.params.id,
+    {
+        $set: {name: req.body.name,
+          size: req.body.size, 
+          life_span: req.body.life_span,
+          weight: req.body.weight, 
+          color: req.body.color, 
+          price: req.body.price, 
+          temperament: req.body.temperament, 
+          images: req.body.images
+        }
+    },
+    {
+        new: true
+    },
+    function(err, updated){
+        if(err){
+            res.send("Error updating data");
+        }else{
+            res.json(updated);
+        }
+    }
+
+    );
+});
  module.exports = route;
