@@ -7,6 +7,7 @@ import { Dogs } from '../dogs'
 })
 export class DogsService {
   constructor(private http:HttpClient) { }
+  private requestBody = JSON.stringify(status);
   listlightd():Observable<any>{
   return this.http.get<any>("http://localhost:3000/PET-SHOP/lightdogs/list/")
   }
@@ -33,5 +34,14 @@ export class DogsService {
   }
   search(name):Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/alldogs/search/"+name)
+  }
+  updatelightpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/lightdogs/update/"+id)
+  }
+  updatenormalpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normaldogs/update/"+id)
+  }
+  updateheavypet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavydogs/update/"+id)
   }
 }

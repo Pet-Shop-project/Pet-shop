@@ -33,7 +33,7 @@ router.get('/listcat',function(req,resp){
    })
   
   })
-  route.put('/update/:id', function(req, res){
+  router.put('/update/:id', function(req, res){
     console.log('Update a Cats');
     mongoose.model("cats").findByIdAndUpdate(req.params.id,
     {

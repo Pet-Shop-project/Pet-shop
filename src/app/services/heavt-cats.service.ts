@@ -10,6 +10,7 @@ export class HeavtCatsService {
   [x: string]: any;
 
   constructor(private http:HttpClient) { }
+  private requestBody = JSON.stringify(status);
   get_heavy_cats():Observable<any>{
     
     
@@ -54,6 +55,15 @@ export class HeavtCatsService {
   }
   all_details(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/details/"+_id)
+  }
+  updatelightpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/light_cats/update/"+id)
+  }
+  updatenormalpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normal_cats/update/"+id)
+  }
+  updateheavypet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavy_cats/update/"+id)
   }
 }
 

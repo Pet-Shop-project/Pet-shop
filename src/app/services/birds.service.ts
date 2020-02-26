@@ -10,6 +10,7 @@ export class BirdsService {
   //   throw new Error("Method not implemented.");
   // }
   constructor(private http:HttpClient) { }
+  private requestBody = JSON.stringify(status);
   listlightd():Observable<any>{
   return this.http.get<any>("http://localhost:3000/PET-SHOP/lightbirds/list/")
   }
@@ -34,5 +35,14 @@ listheavy():Observable<any>{
   }
   alldetails(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/details/"+_id)
+  }
+  updatelightpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/lightbirds/update/"+id)
+  }
+  updatenormalpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normalbirds/update/"+id)
+  }
+  updateheavypet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavybirds/update/"+id)
   }
 }

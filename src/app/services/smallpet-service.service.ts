@@ -16,7 +16,7 @@ export class SmallpetServiceService {
  public normaldetails_api='http://localhost:3000/PET-SHOP/normal_pet/details/'
  public alldetails_api='http://localhost:3000/PET-SHOP/all_pet/details/'
   constructor(private http:HttpClient) { }
-
+  private requestBody = JSON.stringify(status);
   getlightpet():Observable<any>{
     return this.http.get<any>(this.light_api)
 
@@ -45,6 +45,15 @@ export class SmallpetServiceService {
   }
   getalldetails(all_id):Observable<any>{
     return this.http.get<any>(this.alldetails_api+all_id )
+  }
+  updatelightpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/light_pet/update/"+id)
+  }
+  updatenormalpet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normal_pet/update/"+id)
+  }
+  updateheavypet(id):Observable<any>{
+    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavy_pet/update/"+id)
   }
 
 
