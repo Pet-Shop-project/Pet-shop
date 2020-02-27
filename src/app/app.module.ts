@@ -81,6 +81,13 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { LightCatAddformComponent } from './cat_admin/light-cat-addform/light-cat-addform.component';
 import { NormalCatAddformComponent } from './cat_admin/normal-cat-addform/normal-cat-addform.component';
 import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
+import { AllbirdsearchComponent } from './search/allbirdsearch/allbirdsearch.component';
+import { AllsmallpetsearchComponent } from './search/allsmallpetsearch/allsmallpetsearch.component';
+import { LightdogsearchComponent } from './search/lightdogsearch/lightdogsearch.component';
+import { NormaldogsearchComponent } from './search/normaldogsearch/normaldogsearch.component';
+import { HeavydogsearchComponent } from './search/heavydogsearch/heavydogsearch.component';
+import { HeavycatsearchComponent } from './search/heavycatsearch/heavycatsearch.component';
+import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsearch.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -162,6 +169,13 @@ import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
     LightCatAddformComponent,
     NormalCatAddformComponent,
     AddnewadminComponent,
+    AllbirdsearchComponent,
+    AllsmallpetsearchComponent,
+    LightdogsearchComponent,
+    NormaldogsearchComponent,
+    HeavydogsearchComponent,
+    HeavycatsearchComponent,
+    NormalcatsearchComponent,
   ],
   imports: [
     BrowserModule,

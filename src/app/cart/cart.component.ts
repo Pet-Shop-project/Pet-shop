@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   public cartInfo: Cart[]=[];
   public product_id;
   public product={}
-  public noProducts;
+  public noProducts:String;
   public total:Number=0;
   constructor(private cartserv:CartService,private router:Router,private LogServ : LoginService) {
     if(this.LogServ.auth()){
@@ -29,7 +29,8 @@ export class CartComponent implements OnInit {
           });
           this.cartInfo=data;
           console.log(data)
-        } else{
+        } 
+        else{
           this.noProducts="Cart still Empty"
           
         }
@@ -42,22 +43,8 @@ export class CartComponent implements OnInit {
 
     }
    }
-
   ngOnInit() {
-    // this.cartserv.getCart().subscribe(data =>{
-    //   this.cart=data;
-    //   console.log(typeof(data));
-    //   console.log(data)
-
-    // })
   }
-  // deleteCartItem(itemId){
-  //   this.router.navigate(['/cart',itemId]);
-  //   this.cartserv.postDeleteCart(itemId).subscribe(()=>{
-  //     console.log('deleted');
-      
-  //   })
-  // }
   clearAllOfTheCart(){
     this.cartserv.clearCart().subscribe(data=>console.log("you've cleared your cart"))
   }
