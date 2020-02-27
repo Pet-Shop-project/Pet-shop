@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BirdsService } from 'src/app/services/birds.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Birds } from 'src/app/birds';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-normal-details',
@@ -9,12 +10,9 @@ import { Birds } from 'src/app/birds';
   styleUrls: ['./normal-details.component.css']
 })
 export class NormalDetailsComponent implements OnInit {
-  
-  
-
   public normalid;
 public birds=new Birds("", "",0,0,"",0,"",[""]);
-  constructor(private getnormaldetails:BirdsService,private detailroute:ActivatedRoute, private router:Router) { }
+  constructor(private getnormaldetails:BirdsService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService) { }
 
   ngOnInit() {
     this.detailroute.paramMap.subscribe((params:ParamMap)=>{
@@ -24,5 +22,12 @@ public birds=new Birds("", "",0,0,"",0,"",[""]);
       this.birds=data;
      })
       // console.log(this.lightdetails)
+  }
+  public addToCart(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
   }
   }

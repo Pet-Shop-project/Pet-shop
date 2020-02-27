@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Cats} from '../../cats'
 import {HeavtCatsService} from '../../services/heavt-cats.service'
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-normal-cats-details',
@@ -11,7 +12,7 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 export class NormalCatsDetailsComponent implements OnInit {
 
   constructor(private catServ:HeavtCatsService,
-    private router:Router,private route:ActivatedRoute,) { }
+    private router:Router,private route:ActivatedRoute,private cartserv:CartService) { }
     public code;
     public ID;
   
@@ -37,5 +38,11 @@ export class NormalCatsDetailsComponent implements OnInit {
    this.router.navigate(['/listcats']);
 
   }
-
+  public addToCart(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
+  }
 }

@@ -1,6 +1,6 @@
 <body>
 <!-- <div class="row" style="margin-bottom: 100px;margin-top: 50px;"> -->
-<h1 style="margin-top: 30px;">You have {{cartInfo.totalQuantity}} pets<span>s</span> in shopping carts</h1>
+<h1 style="margin-top: 30px;">You have {{cartInfo.totalQuantity}} pets<span></span> in shopping carts</h1>
 <div>{{noProducts}}</div>
 
 <ul class="cart__item-list" *ngFor="let product of productsInCart">
@@ -14,14 +14,18 @@
       <div class="btn-txt">Delete</div>
     </button>
   </li>
+  
 </ul>
+<button class="btn fifth" (click)="clearAllOfTheCart()" style="margin-left: 400px;">Clear</button>
 <hr>
 <div class="centered">
   <form action="/create-order" method="POST">
     <div style="font-size: 30px;margin-left: 50px;font-family: fantasy;margin-bottom: 60px;"> Total Price: {{total}} LE
+      <button class="btn fourth" routerLink="/payment" style="margin-left: 50px;">Check out</button>
     </div>
-    <button type="button" (click)="clearAllOfTheCart()" class="btn btn-secondary right">clear shopping cart</button>
-    <button routerLink="/payment" class="btn btn-primary">Click check out</button>
+    <!-- <button type="button" (click)="clearAllOfTheCart()" class="btn btn-secondary right">clear shopping cart</button> -->
+    <!-- <button routerLink="/payment" class="btn btn-primary">Click check out</button> --> 
+   
   </form>
 </div>
 </body>

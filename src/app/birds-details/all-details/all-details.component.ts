@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { BirdsService } from 'src/app/services/birds.service';
 import { Birds } from 'src/app/birds';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-all-details',
@@ -14,7 +15,7 @@ export class AllDetailsComponent implements OnInit {
   
   public allid;
 public birds=new Birds("", "",0,0,"",0,"",[""]);
-  constructor(private getallbirds:BirdsService,private detailroute:ActivatedRoute, private router:Router) { }
+  constructor(private getallbirds:BirdsService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService) { }
 
   ngOnInit() {
     this.detailroute.paramMap.subscribe((params:ParamMap)=>{
@@ -24,6 +25,13 @@ public birds=new Birds("", "",0,0,"",0,"",[""]);
       this.birds=data;
      })
       // console.log(this.lightdetails)
+  }
+  public addToCart(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
   }
 }
 

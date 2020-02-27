@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { SmallpetServiceService } from 'src/app/services/smallpet-service.service';
 import { Smallpets } from '../../smallpets';
 import { from } from 'rxjs';
+import { CartService } from 'src/app/services/cart.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { from } from 'rxjs';
 export class LightpetsDetailsComponent implements OnInit {
   public lightid;
 public pet=new Smallpets("","",0,"","",0,"",[""]);
-  constructor(private getLightpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router) { }
+  constructor(private getLightpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService) { }
 
   ngOnInit() {
     this.detailroute.paramMap.subscribe((params:ParamMap)=>{
@@ -23,6 +24,13 @@ public pet=new Smallpets("","",0,"","",0,"",[""]);
       this.pet=data;
      })
       // console.log(this.lightdetails)
+  }
+  public addToCart(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
   }
 
 }

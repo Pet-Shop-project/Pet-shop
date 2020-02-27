@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccessoriesService } from '../services/accessories.service';
 import { Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-accessories',
@@ -29,7 +30,7 @@ export class AccessoriesComponent implements OnInit {
       screenReaderPageLabel: 'page',
       screenReaderCurrentLabel: `You're on page`
   };
-  constructor(private acc:AccessoriesService,private router:Router) {
+  constructor(private acc:AccessoriesService,private router:Router,private cartserv:CartService) {
     for (var i = 0; i < this.collection.count; i++) {
       this.collection.data.push(
         {
@@ -53,6 +54,13 @@ export class AccessoriesComponent implements OnInit {
     console.log(data);
 
     })
+  }
+  public addToCart(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
   }
 
 }

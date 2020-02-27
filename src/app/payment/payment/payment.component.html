@@ -1,18 +1,20 @@
+<body>
 <div class="container-fluid">
-    <div class="row" style="margin-bottom: 150px;">
+    <div class="row" style="margin-bottom: 150px;margin-top: 200px;">
     <h2>Stacked form</h2>
     <form method="POST" #form="ngForm" novalidate (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="card">Your Card Number:</label>
+        <label for="card" style="font-size: 15px;margin-right: 30px;">Card Number:</label>
         <input type="text" class="form-control" class="validate" name="card" id="card"  [(ngModel)]="cardModel.card" 
-        [class.is-invalid]="number.invalid && number.touched"  #number="ngModel" required placeholder="Card Number">
+        [class.is-invalid]="number.invalid && number.touched"  #number="ngModel" required placeholder="Card Number" style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
       </div>
       <div class="form-group">
-        <label for="card">Enter Verification:</label>
+        <label for="card" style="font-size: 15px;margin-right: 10px;">Enter Verification:</label>
         <input type="text" class="form-control" class="validate" name="verification"  id="verification" [class.is-invalid]="card.invalid &&card.touched"
-         [(ngModel)]="cardModel.verification" #card="ngModel" required placeholder="Verification Number">
+         [(ngModel)]="cardModel.verification" #card="ngModel" required placeholder="Verification Number" style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
       </div>
-      <button type="submit" class="btn btn-primary">Submit Payment</button>
+      <button class="btn fourth" type="submit" class="btn btn-primary" style="margin-left: 200px;">Submit Payment</button>
     </form>
   </div>
   </div>
+</body>
