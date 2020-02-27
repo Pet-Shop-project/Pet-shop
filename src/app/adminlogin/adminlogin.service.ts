@@ -14,13 +14,18 @@ export class AdminloginService {
     console.log(Login)
     return this.http.post('http://localhost:3000/PET-SHOP/admin/login',Login,{
       observe :'body',   
-      params : new HttpParams().append('token',localStorage.getItem('token'))});
+      params : new HttpParams().append('Admintoken',localStorage.getItem('Admintoken'))});
    }
+   GetAdmin(){
+    return this.http.get('http://localhost:3000/PET-SHOP/admin/Username',{
+      observe :'body',   
+      params : new HttpParams().append('Admintoken',localStorage.getItem('Admintoken'))});
+  }
 
   public auth(){
-    return !!localStorage.getItem('token')
+    return !!localStorage.getItem('Admintoken')
   }
   getToken(){
-    return localStorage.getItem('token')
+    return localStorage.getItem('Admintoken')
   }
 }

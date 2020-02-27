@@ -80,6 +80,7 @@ import { PaymentComponent } from './payment/payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { LightCatAddformComponent } from './cat_admin/light-cat-addform/light-cat-addform.component';
 import { NormalCatAddformComponent } from './cat_admin/normal-cat-addform/normal-cat-addform.component';
+import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -160,6 +161,7 @@ import { NormalCatAddformComponent } from './cat_admin/normal-cat-addform/normal
     AdminloginComponent,
     LightCatAddformComponent,
     NormalCatAddformComponent,
+    AddnewadminComponent,
   ],
   imports: [
     BrowserModule,

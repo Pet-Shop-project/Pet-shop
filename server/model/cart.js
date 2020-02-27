@@ -4,12 +4,9 @@ var cart=new Schema({
     note:String,
     totalPrice:Number,
     totalQuantity:Number
-    ,products:Array
-    // user:{
-    //     type:Schema.Types.ObjectId
-    //     ,ref:'UserSchemas'
-    //     ,required:true
-    // }
+    ,product_id : String,
+    user:String,
+    name:String
 },
 {
     collection: "cart"

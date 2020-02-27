@@ -55,7 +55,7 @@ export class AdminloginComponent implements OnInit {
         this.Result = true;
          console.log(res)
         this.resetForm(form);
-        localStorage.setItem('token',res as string)
+        localStorage.setItem('Admintoken',res as string)
         this.router.navigate(['/dashboard'])
         
     },

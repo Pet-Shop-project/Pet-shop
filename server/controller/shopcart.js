@@ -45,74 +45,94 @@ route.get("/add/:id/:price/:name",verifytoken,function(req,resp,next){
   
   productId=req.params.id
   productPrice=parseInt(req.params.price);
+  productName=req.params.name;
   // console.log(req.query.images);
   console.log(productId)
   console.log(productPrice);
+  console.log(productName)
   
   
   const productAddedToCart = {
       price:productPrice,
-      name:req.params.name,
+      name:productName,
       quantity: 1,
       _id:productId,
       images:req.query.images
   }
   
-  mongoose.model('allshoppets').findOne({user:cartId},(err,cart)=>{
+  mongoose.model('cart').findOne({user:cartId , product_id :req.params.id },(err,cart)=>{
+
       if (!cart){
           var cartModel = mongoose.model("cart")
           var cart = new cartModel()
-          cart.products=[productAddedToCart]
-          cart.totalPrice=productPrice
+          cart.product_id=req.params.id // change to object of allshoppets
+          cart.totalPrice=productPrice;
           cart.totalQuantity=1;
-          cart.user=cartId
+          cart.user=cartId;
+          cart.name=productName;
           cart.save(function(err,data){
           resp.send(data);
           console.log(data);
           })
+          console.log("Iam Heree save")
+      
       
       }else{
-          var indexOfProduct=-1;
-          for (let i=0; i<cart.products.length; i++){
-              if(req.params.id===cart.products[i]._id){
-                  indexOfProduct=i;
-                  console.log("you have added this to cart already");
-                  break;
+               cart.totalQuantity+=1;
+                cart.totalPrice+=productPrice
+                mongoose.model('cart').updateOne({user:cartId,product_id : req.params.id},{$set: cart},(err,data)=>{
+                    if(err){
+                      console.log(err)
+                    }
+                        console.log(data)
+                        console.log(cart)
+                        console.log("Iam Heree Update")
+       
+                   
+                })
               }
-              }
-          if(indexOfProduct>=0){
-              console.log("this product is in your cart , need to update "+indexOfProduct)
-              cart.products[indexOfProduct].quantity+=1
-              // console.log(cart.products[indexOfProduct].quantity)
-              cart.products[indexOfProduct].price+=productPrice;
-              cart.totalQuantity+=1;
-              cart.totalPrice+=productPrice
-              mongoose.model('cart').updateOne({user:cartId},{$set: cart},(err,data)=>{
-                  if(err){
-                    console.log(err)
-                  }
-                      console.log(data)
-                      console.log(cart)
+      //     var indexOfProduct=-1;
+      //     //update quantity ++ in database
+      //     for (let i=0; i<cart.products.length; i++){
+      //         if(req.params.id===cart.products[i]._id){
+      //             indexOfProduct=i;
+      //             console.log("you have added this to cart already");
+      //             break;
+      //         }
+      //         }
+      //     if(indexOfProduct>=0){
+      //         console.log("this product is in your cart , need to update "+indexOfProduct)
+      //         cart.products[indexOfProduct].quantity+=1
+      //         // console.log(cart.products[indexOfProduct].quantity)
+      //         cart.products[indexOfProduct].price+=productPrice;
+      //         cart.totalQuantity+=1;
+      //         cart.totalPrice+=productPrice
+      //         mongoose.model('cart').updateOne({user:cartId},{$set: cart},(err,data)=>{
+      //             if(err){
+      //               console.log(err)
+      //             }
+      //                 console.log(data)
+      //                 console.log(cart)
                  
-              })
+      //         })
               
-          }else{
-              console.log("no this isn'i't in your cart lets add it")
-              cart.totalQuantity=cart.totalQuantity +1;
-              cart.totalPrice= cart.totalPrice + productPrice
-              cart.products.push(productAddedToCart)
-              mongoose.model('cart').updateOne({user:cartId},{$set: cart},(err,data)=>{
-                  if(err){
-                    console.log(err)
-                  }
-                      console.log(data)
-                      console.log(cart)
+      //     }else{
+      //         console.log("no this isn'i't in your cart lets add it")
+      //         cart.totalQuantity=cart.totalQuantity +1;
+      //         cart.totalPrice= cart.totalPrice + productPrice
+      //         cart.products.push(productAddedToCart)
+      //         mongoose.model('cart').updateOne({user:cartId},{$set: cart},(err,data)=>{
+      //             if(err){
+      //               console.log(err)
+      //             }
+      //                 console.log(data)
+      //                 console.log(cart)
                  
-              })
+      //         })
               
-          }
-          console.log(indexOfProduct)
-      }
+      //     }
+      //     console.log(indexOfProduct)
+      // }
   })
   
 })
@@ -120,7 +140,7 @@ route.get("/add/:id/:price/:name",verifytoken,function(req,resp,next){
 route.get('/details',verifytoken, function (req, resp) {
   if(req.query.token != null){
       cartId=Token.useremail
-   mongoose.model("cart").findOne({user : cartId}, function (err,data){
+   mongoose.model("cart").find({user : cartId}, function (err,data){
       if (!err){
           console.log(Token.useremail);
            resp.status(200).send(data)
@@ -136,16 +156,17 @@ route.get('/details',verifytoken, function (req, resp) {
 })
 
 route.get('/deleteItem/:id',verifytoken, function (req, resp) {
-  cartId=Token.userId
-  mongoose.model('cart').update({user:cartId},{ $pull:{ products :{_id:req.params.id} } },()=>console.log("deleted"+req.params.id)
+  cartId=Token.useremail
+  mongoose.model('cart').deleteOne({user:cartId},{ $pull:{ products :{product_id:req.params.id} } 
+  },()=>console.log("deleted"+req.params.id)
   )
 
   resp.end()
 })
 
 route.get('/clear',verifytoken,function(req, resp){
-  cartId=Token.userId
-  mongoose.model("cart").deleteOne({user:cartId},(err,data)=>console.log(data))
+  cartId=Token.useremail
+  mongoose.model("cart").remove({user:cartId},(err,data)=>console.log(data))
   resp.end()
       
 })

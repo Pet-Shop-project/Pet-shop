@@ -63,6 +63,7 @@ import { CartComponent } from './cart/cart.component';
 import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.component';
 import { PaymentComponent } from './payment/payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
 
 const routes: Routes = [
   
@@ -140,8 +141,8 @@ const routes: Routes = [
 {path:'cart',component:CartComponent},
 {path:'all_dog_search/:name',component:AlldogsearchComponent},
 {path:'payment',component:PaymentComponent},
-{path:'adminlogin',component:AdminloginComponent}
-
+{path:'adminlogin',component:AdminloginComponent},
+{path:'addnewadmin',component:AddnewadminComponent}
 
 
 // {path:'404',component:PageNotfoundComponent},
